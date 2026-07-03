@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Automation Proposal – Don McClain, Fast Commercial Capital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f172a;
+      --navy2: #1e293b;
+      --gold: #f4622e;
+      --gold-light: #ff8b5e;
+      --gold-dark: #c94a1e;
+      --white: #ffffff;
+      --offwhite: #f8fafc;
+      --gray100: #f1f5f9;
+      --gray200: #e2e8f0;
+      --gray400: #94a3b8;
+      --gray600: #475569;
+      --gray800: #1e293b;
+      --green: #10b981;
+      --red: #ef4444;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(15,23,42,0.08);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--offwhite);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,23,42,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(244,98,46,0.15);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray400);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all .2s;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+      background: rgba(244,98,46,0.1);
+    }
+
+    /* ── SECTIONS ──────────────────────────────────────── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-block;
+      background: rgba(244,98,46,0.12);
+      color: var(--gold-dark);
+      border: 1px solid rgba(244,98,46,0.25);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray600);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      padding: 100px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 700px 500px at 60% 40%, rgba(244,98,46,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,98,46,0.12);
+      border: 1px solid rgba(244,98,46,0.3);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 580px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .hero-metrics {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: var(--gray400);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .hero-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.12);
+      align-self: center;
+    }
+    .hero-prepared {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-prepared-item { display: flex; flex-direction: column; }
+    .hero-prepared-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 4px; }
+    .hero-prepared-value { font-size: 15px; font-weight: 600; color: var(--white); }
+
+    /* ── PROBLEM ───────────────────────────────────────── */
+    #problem { background: var(--white); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    .problem-card {
+      background: var(--offwhite);
+      border: 1px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .problem-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .problem-icon { font-size: 32px; margin-bottom: 14px; }
+    .problem-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+    .problem-card p { font-size: 14px; color: var(--gray600); line-height: 1.65; }
+
+    .stat-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 38px; font-weight: 900; color: var(--gold); letter-spacing: -1px; line-height: 1; }
+    .stat-desc { font-size: 13px; color: #94a3b8; margin-top: 6px; }
+
+    /* ── PIPELINE ──────────────────────────────────────── */
+    #pipeline { background: var(--offwhite); }
+    .pipeline-track {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .pipeline-step {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .pipeline-step:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.1);
+    }
+    .pipeline-step .step-num {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pipeline-step .step-icon { font-size: 28px; margin: 8px 0 10px; }
+    .pipeline-step .step-label { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+    .pipeline-arrow { display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); font-weight: 700; }
+
+    /* ── FLOWS ─────────────────────────────────────────── */
+    #flows { background: var(--white); }
+    .flows-list { display: flex; flex-direction: column; gap: 32px; }
+    .flow-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s;
+    }
+    .flow-card:hover { box-shadow: var(--shadow-lg); }
+    .flow-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 28px 32px;
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--gray200);
+    }
+    .flow-num {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      color: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .flow-header-text h3 { font-size: 19px; font-weight: 800; color: var(--navy); }
+    .flow-header-text p { font-size: 14px; color: var(--gray600); margin-top: 3px; }
+    .flow-body { padding: 28px 32px; }
+    .flow-steps { display: flex; flex-direction: column; gap: 14px; }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--offwhite);
+      border-radius: 10px;
+      border-left: 3px solid var(--gold);
+    }
+    .flow-step-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .flow-step-text h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .flow-step-text p { font-size: 13px; color: var(--gray600); line-height: 1.55; }
+
+    /* timeline inside flow */
+    .flow-timeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .tl-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      min-width: 90px;
+    }
+    .tl-dot {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .tl-label { font-size: 11px; font-weight: 700; color: var(--navy); text-align: center; }
+    .tl-sublabel { font-size: 10px; color: var(--gray400); text-align: center; }
+    .tl-arrow { flex: 1; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); min-width: 20px; }
+
+    /* ── COMPARISON ────────────────────────────────────── */
+    #comparison { background: var(--offwhite); }
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+    .compare-table thead tr {
+      background: var(--navy);
+    }
+    .compare-table thead th {
+      padding: 18px 24px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .compare-table thead th.col-bad { color: #fca5a5; }
+    .compare-table thead th.col-good { color: var(--gold-light); }
+    .compare-table tbody tr { border-bottom: 1px solid var(--gray100); }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table tbody tr:hover { background: var(--offwhite); }
+    .compare-table td {
+      padding: 16px 24px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    .compare-table td:first-child { font-weight: 600; color: var(--navy); }
+    .col-bad { color: var(--red); font-weight: 500; }
+    .col-good { color: var(--green); font-weight: 600; }
+
+    /* ── DELIVERABLES ──────────────────────────────────── */
+    #deliverables { background: var(--white); }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .deliverable-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--offwhite);
+      transition: box-shadow .2s, border-color .2s, transform .2s;
+    }
+    .deliverable-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .deliverable-icon { font-size: 28px; margin-bottom: 12px; }
+    .deliverable-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .deliverable-card p { font-size: 13px; color: var(--gray600); line-height: 1.6; }
+
+    /* ── TIMELINE ──────────────────────────────────────── */
+    #timeline { background: var(--offwhite); }
+    .timeline-list { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(244,98,46,0.1));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .tl-week-dot {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      text-align: center;
+      line-height: 1.2;
+      z-index: 1;
+    }
+    .tl-content {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .tl-content h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .tl-content p { font-size: 14px; color: var(--gray600); }
+
+    /* ── CTA ───────────────────────────────────────────── */
+    #cta {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #0f172a 100%);
+      text-align: center;
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 400px at 50% 50%, rgba(244,98,46,0.06) 0%, transparent 70%);
+    }
+    #cta .section-title { color: var(--white); }
+    #cta .section-sub { color: #94a3b8; margin-left: auto; margin-right: auto; text-align: center; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: all .2s;
+      box-shadow: 0 8px 30px rgba(244,98,46,0.35);
+    }
+    .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(244,98,46,0.45); }
+    .cta-note { font-size: 13px; color: var(--gray400); margin-top: 20px; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer p { font-size: 13px; color: var(--gray400); }
+    footer strong { color: var(--gold); }
+
+    /* ── MOBILE ────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero-metrics { gap: 20px; }
+      .hero-divider { display: none; }
+      .stat-banner { padding: 28px 20px; }
+      .flow-header, .flow-body { padding: 20px; }
+      .compare-table { display: block; overflow-x: auto; }
+      .roi-box { padding: 28px 24px; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Think To Share" height="34" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#flows">Automations</a></li>
+      <li><a href="#comparison">Results</a></li>
+      <li><a href="#deliverables">Deliverables</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-badge">🏦 Marketing Automation Proposal — Capital Advisory &amp; Transaction Structuring</div>
+    <h1 class="hero-title">
+      Turn Capital Seekers Into<br/>
+      <span class="highlight">Signed Advisory Engagements.</span>
+    </h1>
+    <p class="hero-sub">
+      You close complex, time-sensitive deals by imposing clarity and structure where others see chaos. But the system that gets a serious capital seeker from first inquiry to signed engagement is likely still manual — and high-intent clients who don't hear back within hours go to the next advisor on their list.
+    </p>
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-value">8×</span>
+        <span class="metric-label">Higher conversion with<br/>sub-1-hour response</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">78%</span>
+        <span class="metric-label">Of deals go to the advisor<br/>who responds first</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">60%</span>
+        <span class="metric-label">Of tire-kickers screened<br/>by pre-qualification</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">5+</span>
+        <span class="metric-label">Touchpoints needed<br/>to close most deals</span>
+      </div>
+    </div>
+    <div class="hero-prepared">
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared For</span>
+        <span class="hero-prepared-value">Don McClain, Fast Commercial Capital</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared By</span>
+        <span class="hero-prepared-value">Think To Share</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Date</span>
+        <span class="hero-prepared-value">July 3, 2026</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Valid Until</span>
+        <span class="hero-prepared-value">August 3, 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM ──────────────────────────────────────────── -->
+<section id="problem">
+  <div class="container">
+    <div class="section-label">The Real Problem</div>
+    <h2 class="section-title">Where Your Deal Flow Is Leaking Revenue</h2>
+    <p class="section-sub">Your methodology — upstream analysis, clarity before capital, structure over speed — is exactly what complex transactions need. But without an automated intake and nurture system, the wrong prospects get your time and the right ones go elsewhere.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">📬</div>
+        <h3>Inquiries Across Multiple Channels, No Unified Intake</h3>
+        <p>Capital seekers find Fast Commercial Capital through LinkedIn, your website, referrals, and content. Without a structured intake, every inquiry lands differently — and falls through the cracks at different points.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">⏱️</div>
+        <h3>High-Intent Clients Don't Wait</h3>
+        <p>Business owners and sponsors navigating compressed timelines or distressed situations need answers fast. If they don't hear back within hours, they move to the next advisor — and your competitor closes a deal that should have been yours.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🎯</div>
+        <h3>No Automated Pre-Qualification</h3>
+        <p>Without a structured intake that screens deal size, transaction type, and timeline upfront, you invest advisory time in tire-kickers before discovering a deal doesn't fit your mandate — time that should go to serious engagements.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🌐</div>
+        <h3>fastcommercialcapital.com Isn't Capturing Warm Visitors</h3>
+        <p>Prospects reading your content — case studies, philosophy pieces, deal perspectives — are self-qualifying in real time. But without a capture mechanism, they read and leave. No list, no follow-up, no second chance.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🤝</div>
+        <h3>Post-Engagement Referral Pipeline Is Manual</h3>
+        <p>Closed deals and satisfied clients are your best source of future business. Without an automated referral and relationship maintenance sequence, that warm network goes cold between transactions.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📎</div>
+        <h3>Multi-Party Deal Coordination Still Runs on Email Chains</h3>
+        <p>Complex transactions involving buyers, sellers, lenders, and legal teams require synchronized communication. Managing this through ad-hoc email threads creates coordination risk — the exact structural failure your methodology is designed to prevent.</p>
+      </div>
+    </div>
+
+    <div class="stat-banner">
+      <div class="stat-item">
+        <div class="stat-num">78%</div>
+        <div class="stat-desc">of high-value B2B engagements<br/>go to the first responder</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">&lt;1 hr</div>
+        <div class="stat-desc">response window before<br/>serious prospects disengage</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">60%</div>
+        <div class="stat-desc">of advisory time wasted<br/>on unqualified inquiries</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3×</div>
+        <div class="stat-desc">higher close rate with<br/>structured nurture sequence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PIPELINE ─────────────────────────────────────────── -->
+<section id="pipeline">
+  <div class="container">
+    <div class="section-label">The System</div>
+    <h2 class="section-title">Every Inquiry. Qualified. Converted.</h2>
+    <p class="section-sub">A 6-stage automated pipeline that takes a capital seeker from first contact to signed advisory engagement — with pre-qualification built in so only serious deals reach your calendar.</p>
+
+    <div class="pipeline-track">
+      <div class="pipeline-step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🌐</div>
+        <div class="step-label">Capital Seeker Discovers Fast Commercial Capital</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">2</div>
+        <div class="step-icon">📋</div>
+        <div class="step-label">Structured Inquiry Submitted</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">3</div>
+        <div class="step-icon">⚡</div>
+        <div class="step-label">Instant Response + Pre-Qualification</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">4</div>
+        <div class="step-icon">📅</div>
+        <div class="step-label">Advisory Call Booked</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">5</div>
+        <div class="step-icon">✍️</div>
+        <div class="step-label">Engagement Letter Signed</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">6</div>
+        <div class="step-icon">🏗️</div>
+        <div class="step-label">Deal Coordination Begins</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOWS ───────────────────────────────────────────── -->
+<section id="flows">
+  <div class="container">
+    <div class="section-label">5 Automation Flows</div>
+    <h2 class="section-title">What Gets Built For You</h2>
+    <p class="section-sub">Five fully configured automation sequences that run 24/7 — across your website, LinkedIn presence, and inquiry pipeline — so serious deals find you and unqualified ones don't waste your time.</p>
+
+    <div class="flows-list">
+
+      <!-- Flow 1 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">1</div>
+          <div class="flow-header-text">
+            <h3>⚡ Instant Inquiry Response + Pre-Qualification (0–5 Minutes)</h3>
+            <p>Every inquiry — from your website, LinkedIn, or referral — gets an immediate professional response and a structured intake form that screens seriousness before you invest a minute of advisory time.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📋</div>
+              <div class="flow-step-text">
+                <h4>Inquiry Submitted (Any Channel)</h4>
+                <p>Triggers from: website contact form, LinkedIn message integration, referral partner intake link, or direct email parsing — all funnel into one unified system</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📧</div>
+              <div class="flow-step-text">
+                <h4>Instant Professional Acknowledgment</h4>
+                <p>A warm, credibility-building reply in your voice — confirms receipt, sets expectations, and signals that you operate with the same structure you bring to transactions</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎯</div>
+              <div class="flow-step-text">
+                <h4>Pre-Qualification Questions Delivered</h4>
+                <p>A short intake form screens deal type, transaction size, timeline, and stage — separating serious capital seekers from early-stage tire-kickers before a single advisory minute is spent</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔀</div>
+              <div class="flow-step-text">
+                <h4>Automatic Routing by Qualification Score</h4>
+                <p>Qualified prospects go straight to advisory call booking. Unqualified or early-stage inquiries enter a nurture sequence — no deals fall through the cracks, no time is wasted</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 2 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">2</div>
+          <div class="flow-header-text">
+            <h3>📅 Advisory Call Booking &amp; Reminder Sequence</h3>
+            <p>Eliminates scheduling friction and dramatically reduces no-shows for your advisory calls — with a smart multi-touch reminder sequence that keeps momentum through the booking.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">✅</div>
+              <div class="flow-step-text">
+                <h4>One-Click Calendar Booking</h4>
+                <p>Qualified prospects receive a direct booking link — no email ping-pong over availability, no lost momentum between qualification and conversation</p>
+              </div>
+            </div>
+          </div>
+          <div class="flow-timeline">
+            <div class="tl-node">
+              <div class="tl-dot">📬</div>
+              <div class="tl-label">Booking</div>
+              <div class="tl-sublabel">Confirmed</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">📧</div>
+              <div class="tl-label">48 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🔔</div>
+              <div class="tl-label">24 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">⏰</div>
+              <div class="tl-label">2 hrs</div>
+              <div class="tl-sublabel">Final Alert</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">📞</div>
+              <div class="tl-label">Advisory</div>
+              <div class="tl-sublabel">Call Happens</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">💌</div>
+              <div class="tl-label">1 hr after</div>
+              <div class="tl-sublabel">Follow-up</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 3 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">3</div>
+          <div class="flow-header-text">
+            <h3>🧠 Pre-Call Nurture — Structure Over Capital</h3>
+            <p>Between inquiry qualification and advisory call, a targeted content sequence delivers your core philosophy — building credibility, pre-selling your methodology, and arriving to every call with a prospect who already understands your value.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📬</div>
+              <div class="flow-step-text">
+                <h4>Immediately After Booking — Philosophy Primer</h4>
+                <p>"Why Most Transactions Fail (And It's Not Capital)" — introduces your upstream analysis methodology and sets the frame for the advisory conversation</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🏗️</div>
+              <div class="flow-step-text">
+                <h4>Day 2 — Transaction Structuring Insight</h4>
+                <p>A case-study-style piece showing how structure, not capital, determined the outcome — demonstrates your analytical edge without the pitch</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔍</div>
+              <div class="flow-step-text">
+                <h4>Day 4 — Feasibility &amp; Risk Framing</h4>
+                <p>Walks through what upstream risk analysis catches before it becomes a deal-killer — pre-sells your due-diligence rigor before the call even starts</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📊</div>
+              <div class="flow-step-text">
+                <h4>Day 6 — Call Preparation Guide</h4>
+                <p>A short "what to bring to your advisory call" checklist — deal summary, timeline, capital stack overview — so prospects arrive prepared and the call moves faster to engagement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 4 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">4</div>
+          <div class="flow-header-text">
+            <h3>📩 Engagement Letter &amp; Onboarding Automation</h3>
+            <p>After the advisory call, engagement letters are delivered, followed up, and signed automatically — no deals die in email limbo while momentum fades.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📄</div>
+              <div class="flow-step-text">
+                <h4>Engagement Letter Auto-Delivered Within 30 Minutes</h4>
+                <p>Sent while the advisory call is still fresh — captures deal momentum at its peak and reflects the same execution discipline you bring to transactions</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔔</div>
+              <div class="flow-step-text">
+                <h4>Signed Follow-Up Sequence (Day 2 → Day 5 → Day 9)</h4>
+                <p>Three gentle, professionally-framed follow-ups with different angles — clarity on scope, urgency around timeline, and a reassurance touchpoint for hesitant prospects</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">✍️</div>
+              <div class="flow-step-text">
+                <h4>One-Click Digital Signature</h4>
+                <p>PandaDoc or DocuSign integration — engagement letter signed from any device in under a minute, from Miami to Austin to San Diego</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🏗️</div>
+              <div class="flow-step-text">
+                <h4>Signed → Deal Coordination Onboarding</h4>
+                <p>Signature triggers automatic delivery of your deal intake package — transaction brief template, stakeholder list, and initial document checklist — so coordination begins without delay</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 5 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">5</div>
+          <div class="flow-header-text">
+            <h3>📡 Content-to-Client Pipeline from fastcommercialcapital.com</h3>
+            <p>Turns your website content — articles, deal perspectives, philosophy pieces — into a continuously growing list of warm, pre-qualified capital seekers who are already sold on your methodology before they ever reach out.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">🧲</div>
+              <div class="flow-step-text">
+                <h4>Capture Form on Every Content Page</h4>
+                <p>A targeted opt-in — "Download: The Transaction Structuring Framework" or "Get the Deal Feasibility Checklist" — embedded on your site so every visitor can become a tracked prospect</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📬</div>
+              <div class="flow-step-text">
+                <h4>Warm Lead Nurture Newsletter</h4>
+                <p>A periodic deal intelligence email — transaction market observations, structuring insights, case perspectives — keeps your name and methodology in front of your list between active engagements</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔗</div>
+              <div class="flow-step-text">
+                <h4>Referral Partner Automation</h4>
+                <p>A dedicated sequence for attorneys, accountants, and intermediaries who refer deals — keeps them engaged, informed on your mandate, and motivated to send the right transactions your way</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎯</div>
+              <div class="flow-step-text">
+                <h4>Smart Segmentation by Transaction Type</h4>
+                <p>Separates CRE transaction prospects from business acquisition clients, recapitalization inquiries, and special-situation engagements — each segment receives content and follow-up tailored to their deal context</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON ───────────────────────────────────────── -->
+<section id="comparison">
+  <div class="container">
+    <div class="section-label">Before vs. After</div>
+    <h2 class="section-title">Clarity, Structure, and Execution — Applied to Your Own Pipeline</h2>
+    <p class="section-sub">Here's what a month of inbound deal flow looks like with and without this system in place.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th class="col-bad">❌ Without Automation</th>
+          <th class="col-good">✅ With Automation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Inquiry response time</td>
+          <td class="col-bad">Hours or days — serious prospects are gone</td>
+          <td class="col-good">Under 5 minutes, 24/7, any channel</td>
+        </tr>
+        <tr>
+          <td>Pre-qualification of inquiries</td>
+          <td class="col-bad">Manual — advisory time spent on tire-kickers</td>
+          <td class="col-good">Automated intake screens every inquiry instantly</td>
+        </tr>
+        <tr>
+          <td>Advisory calls booked (of 20 qualified inquiries)</td>
+          <td class="col-bad">8–10 — friction and slow response lose the rest</td>
+          <td class="col-good">16–18 — instant booking link captures momentum</td>
+        </tr>
+        <tr>
+          <td>No-shows per month</td>
+          <td class="col-bad">High — no structured reminder sequence</td>
+          <td class="col-good">Under 5% with 3-touch automated reminders</td>
+        </tr>
+        <tr>
+          <td>Pre-call prospect preparation</td>
+          <td class="col-bad">None — calls start from zero</td>
+          <td class="col-good">Prospects pre-educated on your methodology before the call</td>
+        </tr>
+        <tr>
+          <td>Engagement letter turnaround</td>
+          <td class="col-bad">Manual — momentum lost while prospect cools</td>
+          <td class="col-good">Auto-delivered within 30 minutes of call end</td>
+        </tr>
+        <tr>
+          <td>Website visitor capture</td>
+          <td class="col-bad">None — warm prospects read and leave</td>
+          <td class="col-good">Every visitor can enter a nurture sequence</td>
+        </tr>
+        <tr>
+          <td>Referral partner engagement</td>
+          <td class="col-bad">Ad-hoc — partners forget your mandate between deals</td>
+          <td class="col-good">Automated touchpoints keep partners warm and deal-aware</td>
+        </tr>
+        <tr>
+          <td>Deal coordination structure</td>
+          <td class="col-bad">Email chains — coordination risk in multi-party deals</td>
+          <td class="col-good">Automated onboarding package triggers on signature</td>
+        </tr>
+        <tr>
+          <td>Advisory time spent on admin</td>
+          <td class="col-bad">Several hours per week</td>
+          <td class="col-good">Under 30 minutes per week</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES ─────────────────────────────────────── -->
+<section id="deliverables">
+  <div class="container">
+    <div class="section-label">What You Get</div>
+    <h2 class="section-title">Everything Built. Nothing Left to Figure Out.</h2>
+    <p class="section-sub">We don't hand you tools and walk away. We build your entire system, write your sequences in your voice, and confirm everything works before go-live.</p>
+
+    <div class="deliverables-grid">
+      <div class="deliverable-card">
+        <div class="deliverable-icon">⚙️</div>
+        <h3>Full System Build &amp; Setup</h3>
+        <p>Every automation configured, connected, and tested — CRM, intake forms, pre-qualification routing, calendar booking, engagement letters, and onboarding sequences.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">✍️</div>
+        <h3>All Sequence Copy Written For You</h3>
+        <p>Every email and message written to match your existing voice and methodology — inquiry responses, pre-call nurture, engagement follow-ups, and referral partner sequences.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🔗</div>
+        <h3>Multi-Channel Integration</h3>
+        <p>Website, LinkedIn, referral partners, email, calendar, and digital signature — all connected into a single, tracked pipeline from first contact to signed engagement.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🧪</div>
+        <h3>Full QA Before Go-Live</h3>
+        <p>Every flow tested end-to-end across all scenarios and channels. Nothing goes live until it works exactly as designed — the same standard you hold for your transactions.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🎓</div>
+        <h3>Handover Training Session</h3>
+        <p>A 1:1 walkthrough so you can manage, update, and expand the system independently — across Miami, Austin, San Diego, or anywhere your deal flow takes you.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🛡️</div>
+        <h3>4-Week Post-Launch Support</h3>
+        <p>We stay on to fix issues, optimize sequences, and refine based on real response and booking data — so the system improves as it runs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ─────────────────────────────────────────── -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-label">Implementation</div>
+    <h2 class="section-title">Live in 4 Weeks</h2>
+    <p class="section-sub">A structured 4-week build process — then 4 weeks of active support to optimize and improve based on real deal flow data.</p>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>1</div>
+        <div class="tl-content">
+          <h3>Discovery &amp; Transaction Flow Mapping</h3>
+          <p>Deep-dive into your current inquiry process, deal types, referral channels, and engagement workflow. CRM and tech stack setup begins. Pre-qualification criteria defined.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>2</div>
+        <div class="tl-content">
+          <h3>Sequence Writing &amp; Content Creation</h3>
+          <p>All email sequences written in your voice, reviewed with you, and approved. Pre-qualification intake form built. Automation map finalized and signed off.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>3</div>
+        <div class="tl-content">
+          <h3>Build, Integrate &amp; Test</h3>
+          <p>All 5 automation flows built, connected, and tested across every channel and scenario — from first inquiry to signed engagement letter.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>4</div>
+        <div class="tl-content">
+          <h3>Go-Live + Handover</h3>
+          <p>System goes live. Full walkthrough and training session. You start capturing every inquiry, qualifying deal flow automatically, and booking advisory calls without manual follow-up.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>5–8</div>
+        <div class="tl-content">
+          <h3>Support, Optimize &amp; Report</h3>
+          <p>Monitor response rates, booking conversion, and pre-qualification accuracy. Refine sequences and routing based on real deal flow data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-label" style="background: rgba(244,98,46,0.15); border-color: rgba(244,98,46,0.3); color: var(--gold-light);">Let's Talk</div>
+    <h2 class="section-title" style="color: var(--white);">Ready to Put the Same Structure Into Your Deal Pipeline?</h2>
+    <p class="section-sub">
+      Book a free 30-minute strategy call. We'll map out exactly which automations will have the highest impact on your advisory practice — no pressure, no pitch, just a clear plan tailored to Fast Commercial Capital.
+    </p>
+    <div style="text-align: center; margin-top: 16px;">
+      <a href="https://calendly.com/thinktoshareitsolutions/book-a-demo" target="_blank" rel="noopener" class="cta-btn">Book a Free Strategy Call →</a>
+      <p class="cta-note">No commitment required · 30 minutes · Free</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer>
+  <p>Prepared by <strong>Think To Share</strong> &nbsp;·&nbsp; Growth Done Thoughtfully &nbsp;·&nbsp; Proposal valid until <strong>August 3, 2026</strong> &nbsp;·&nbsp; Questions? <strong>contact@thinktoshare.com</strong></p>
+  <p style="margin-top: 8px; font-size: 12px; color: #475569;">All statistics sourced from industry research. Results vary based on niche, audience, and existing processes.</p>
+</footer>
+
+</body>
+</html>

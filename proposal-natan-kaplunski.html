@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Automation Proposal – Natan Kaplunski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f172a;
+      --navy2: #1e293b;
+      --gold: #f4622e;
+      --gold-light: #ff8b5e;
+      --gold-dark: #c94a1e;
+      --white: #ffffff;
+      --offwhite: #f8fafc;
+      --gray100: #f1f5f9;
+      --gray200: #e2e8f0;
+      --gray400: #94a3b8;
+      --gray600: #475569;
+      --gray800: #1e293b;
+      --green: #10b981;
+      --red: #ef4444;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(15,23,42,0.08);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--offwhite);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,23,42,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(244,98,46,0.15);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray400);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all .2s;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+      background: rgba(244,98,46,0.1);
+    }
+
+    /* ── SECTIONS ──────────────────────────────────────── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-block;
+      background: rgba(244,98,46,0.12);
+      color: var(--gold-dark);
+      border: 1px solid rgba(244,98,46,0.25);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray600);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      padding: 100px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 700px 500px at 60% 40%, rgba(244,98,46,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,98,46,0.12);
+      border: 1px solid rgba(244,98,46,0.3);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 580px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .hero-metrics {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: var(--gray400);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .hero-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.12);
+      align-self: center;
+    }
+    .hero-prepared {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-prepared-item { display: flex; flex-direction: column; }
+    .hero-prepared-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 4px; }
+    .hero-prepared-value { font-size: 15px; font-weight: 600; color: var(--white); }
+
+    /* ── PROBLEM ───────────────────────────────────────── */
+    #problem { background: var(--white); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    .problem-card {
+      background: var(--offwhite);
+      border: 1px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .problem-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .problem-icon { font-size: 32px; margin-bottom: 14px; }
+    .problem-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+    .problem-card p { font-size: 14px; color: var(--gray600); line-height: 1.65; }
+
+    .stat-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 38px; font-weight: 900; color: var(--gold); letter-spacing: -1px; line-height: 1; }
+    .stat-desc { font-size: 13px; color: #94a3b8; margin-top: 6px; }
+
+    /* ── PIPELINE ──────────────────────────────────────── */
+    #pipeline { background: var(--offwhite); }
+    .pipeline-track {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .pipeline-step {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .pipeline-step:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.1);
+    }
+    .pipeline-step .step-num {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pipeline-step .step-icon { font-size: 28px; margin: 8px 0 10px; }
+    .pipeline-step .step-label { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+    .pipeline-arrow { display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); font-weight: 700; }
+
+    /* ── FLOWS ─────────────────────────────────────────── */
+    #flows { background: var(--white); }
+    .flows-list { display: flex; flex-direction: column; gap: 32px; }
+    .flow-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s;
+    }
+    .flow-card:hover { box-shadow: var(--shadow-lg); }
+    .flow-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 28px 32px;
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--gray200);
+    }
+    .flow-num {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      color: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .flow-header-text h3 { font-size: 19px; font-weight: 800; color: var(--navy); }
+    .flow-header-text p { font-size: 14px; color: var(--gray600); margin-top: 3px; }
+    .flow-body { padding: 28px 32px; }
+    .flow-steps { display: flex; flex-direction: column; gap: 14px; }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--offwhite);
+      border-radius: 10px;
+      border-left: 3px solid var(--gold);
+    }
+    .flow-step-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .flow-step-text h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .flow-step-text p { font-size: 13px; color: var(--gray600); line-height: 1.55; }
+
+    /* timeline inside flow */
+    .flow-timeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .tl-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      min-width: 90px;
+    }
+    .tl-dot {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .tl-label { font-size: 11px; font-weight: 700; color: var(--navy); text-align: center; }
+    .tl-sublabel { font-size: 10px; color: var(--gray400); text-align: center; }
+    .tl-arrow { flex: 1; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); min-width: 20px; }
+
+    /* ── COMPARISON ────────────────────────────────────── */
+    #comparison { background: var(--offwhite); }
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+    .compare-table thead tr {
+      background: var(--navy);
+    }
+    .compare-table thead th {
+      padding: 18px 24px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .compare-table thead th.col-bad { color: #fca5a5; }
+    .compare-table thead th.col-good { color: var(--gold-light); }
+    .compare-table tbody tr { border-bottom: 1px solid var(--gray100); }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table tbody tr:hover { background: var(--offwhite); }
+    .compare-table td {
+      padding: 16px 24px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    .compare-table td:first-child { font-weight: 600; color: var(--navy); }
+    .col-bad { color: var(--red); font-weight: 500; }
+    .col-good { color: var(--green); font-weight: 600; }
+
+    /* ── DELIVERABLES ──────────────────────────────────── */
+    #deliverables { background: var(--white); }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .deliverable-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--offwhite);
+      transition: box-shadow .2s, border-color .2s, transform .2s;
+    }
+    .deliverable-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .deliverable-icon { font-size: 28px; margin-bottom: 12px; }
+    .deliverable-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .deliverable-card p { font-size: 13px; color: var(--gray600); line-height: 1.6; }
+
+    /* ── TIMELINE ──────────────────────────────────────── */
+    #timeline { background: var(--offwhite); }
+    .timeline-list { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(244,98,46,0.1));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .tl-week-dot {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      text-align: center;
+      line-height: 1.2;
+      z-index: 1;
+    }
+    .tl-content {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .tl-content h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .tl-content p { font-size: 14px; color: var(--gray600); }
+
+    /* ── PRICING ───────────────────────────────────────── */
+    #pricing { background: var(--white); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    .pricing-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .pricing-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.15), var(--shadow-lg);
+    }
+    .pricing-tag {
+      background: var(--gold);
+      color: var(--navy);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 16px;
+    }
+    .pricing-header {
+      padding: 28px 28px 20px;
+      border-bottom: 1px solid var(--gray100);
+    }
+    .pricing-name { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .pricing-desc { font-size: 13px; color: var(--gray600); }
+    .pricing-price {
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--gray100);
+    }
+    .price-row { display: flex; align-items: baseline; gap: 6px; }
+    .price-currency { font-size: 20px; font-weight: 700; color: var(--gray600); }
+    .price-amount { font-size: 44px; font-weight: 900; color: var(--navy); letter-spacing: -2px; line-height: 1; }
+    .price-type { font-size: 13px; color: var(--gray400); }
+    .pricing-body { padding: 24px 28px; }
+    .pricing-includes { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 14px; }
+    .pricing-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: var(--gray800);
+    }
+    .pricing-item .pi-check { color: var(--green); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .pricing-cta {
+      display: block;
+      text-align: center;
+      margin: 4px 28px 28px;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .2s;
+      background: var(--navy);
+      color: var(--gold);
+      border: 2px solid var(--navy);
+    }
+    .pricing-cta:hover { background: transparent; color: var(--navy); }
+    .pricing-card.featured .pricing-cta {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+    .pricing-card.featured .pricing-cta:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: var(--white); }
+
+    .roi-box {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .roi-icon { font-size: 48px; flex-shrink: 0; }
+    .roi-text h3 { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .roi-text p { font-size: 15px; color: #94a3b8; line-height: 1.6; }
+    .roi-text strong { color: var(--gold); }
+
+    /* ── CTA ───────────────────────────────────────────── */
+    #cta {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #0f172a 100%);
+      text-align: center;
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 400px at 50% 50%, rgba(244,98,46,0.06) 0%, transparent 70%);
+    }
+    #cta .section-title { color: var(--white); }
+    #cta .section-sub { color: #94a3b8; margin-left: auto; margin-right: auto; text-align: center; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: all .2s;
+      box-shadow: 0 8px 30px rgba(244,98,46,0.35);
+    }
+    .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(244,98,46,0.45); }
+    .cta-note { font-size: 13px; color: var(--gray400); margin-top: 20px; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer p { font-size: 13px; color: var(--gray400); }
+    footer strong { color: var(--gold); }
+
+    /* ── MOBILE ────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero-metrics { gap: 20px; }
+      .hero-divider { display: none; }
+      .stat-banner { padding: 28px 20px; }
+      .flow-header, .flow-body { padding: 20px; }
+      .compare-table { display: block; overflow-x: auto; }
+      .roi-box { padding: 28px 24px; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Think To Share" height="34" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#flows">Automations</a></li>
+      <li><a href="#comparison">Results</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-badge">🎯 Marketing Automation Proposal — Coaching &amp; Consulting Practice</div>
+    <h1 class="hero-title">
+      Turn Interested Prospects Into<br/>
+      <span class="highlight">Paying Clients. Automatically.</span>
+    </h1>
+    <p class="hero-sub">
+      You earn revenue from your sessions and expertise — but your biggest challenge is converting interested prospects into paying clients. Without a system, most inquiries go cold. This proposal shows you how to fix that, permanently.
+    </p>
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-value">8×</span>
+        <span class="metric-label">Higher conversion with<br/>sub-5-min response</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">80%</span>
+        <span class="metric-label">Of sales need 5+<br/>follow-up touchpoints</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">48%</span>
+        <span class="metric-label">Of coaches never follow<br/>up on an inquiry</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">2%</span>
+        <span class="metric-label">Of prospects convert<br/>on first contact</span>
+      </div>
+    </div>
+    <div class="hero-prepared">
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared For</span>
+        <span class="hero-prepared-value">Natan Kaplunski</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared By</span>
+        <span class="hero-prepared-value">Think To Share</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Date</span>
+        <span class="hero-prepared-value">July 3, 2026</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Valid Until</span>
+        <span class="hero-prepared-value">August 3, 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM ──────────────────────────────────────────── -->
+<section id="problem">
+  <div class="container">
+    <div class="section-label">The Real Problem</div>
+    <h2 class="section-title">Where Your Practice Is Losing Revenue Every Week</h2>
+    <p class="section-sub">You have the expertise, the results, and the reputation. But without a system behind you, too many interested prospects quietly disappear before they ever become clients.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">📧</div>
+        <h3>Inquiries Handled Via Personal Inbox</h3>
+        <p>Prospects reach out through your contact page or social profiles and land in a personal inbox alongside everything else. No structure, no triage, no audit trail — just emails that can get buried or forgotten.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">⚡</div>
+        <h3>No Instant Response System</h3>
+        <p>When a prospect submits an inquiry, they're at peak interest. Every hour without a reply lets that interest cool — and increases the chance they contact someone else. You need a system that responds in minutes, not hours.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📅</div>
+        <h3>Manual Scheduling for Discovery Calls</h3>
+        <p>Booking a discovery call today means back-and-forth emails over availability. Each friction point is a drop-off opportunity. Prospects who wanted to talk give up before the call is even confirmed.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔄</div>
+        <h3>No Follow-Up After First Contact</h3>
+        <p>Most prospects say "let me think about it" and never hear from you again. Without a structured follow-up sequence, "I'll get back to them" quietly becomes lost revenue — every single week.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📱</div>
+        <h3>Content Has No Lead Capture</h3>
+        <p>Your social posts, articles, and videos attract attention — but that attention isn't being captured. Visitors consume your content and leave. There's no mechanism to turn a viewer into a subscriber or a subscriber into a lead.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🗣️</div>
+        <h3>Word-of-Mouth Referrals Not Systematized</h3>
+        <p>Your best clients likely came from referrals — but you have no system to consistently generate them. Happy clients who would gladly recommend you are never prompted to do so. That referral engine is sitting dormant.</p>
+      </div>
+    </div>
+
+    <div class="stat-banner">
+      <div class="stat-item">
+        <div class="stat-num">48%</div>
+        <div class="stat-desc">of coaches never follow<br/>up on an inquiry at all</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5 min</div>
+        <div class="stat-desc">response window for<br/>8× higher conversion rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">80%</div>
+        <div class="stat-desc">of sales require 5+<br/>follow-up touchpoints</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2%</div>
+        <div class="stat-desc">of prospects convert<br/>on the very first contact</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PIPELINE ─────────────────────────────────────────── -->
+<section id="pipeline">
+  <div class="container">
+    <div class="section-label">The System</div>
+    <h2 class="section-title">Every Prospect. Every Inquiry. Fully Tracked.</h2>
+    <p class="section-sub">A 6-stage pipeline that takes a prospect from initial discovery all the way to onboarded client — without manual chasing at any step.</p>
+
+    <div class="pipeline-track">
+      <div class="pipeline-step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🌐</div>
+        <div class="step-label">Prospect Discovers You</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">2</div>
+        <div class="step-icon">✉️</div>
+        <div class="step-label">Inquiry Submitted</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">3</div>
+        <div class="step-icon">⚡</div>
+        <div class="step-label">Instant Response</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">4</div>
+        <div class="step-icon">📅</div>
+        <div class="step-label">Discovery Call Booked</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">5</div>
+        <div class="step-icon">📄</div>
+        <div class="step-label">Proposal Sent</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">6</div>
+        <div class="step-icon">✅</div>
+        <div class="step-label">Client Onboarded</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOWS ───────────────────────────────────────────── -->
+<section id="flows">
+  <div class="container">
+    <div class="section-label">5 Automation Flows</div>
+    <h2 class="section-title">What Gets Built For You</h2>
+    <p class="section-sub">Five fully configured automation sequences that run 24/7 — converting prospects, booking calls, nurturing leads, closing proposals, and generating referrals on autopilot.</p>
+
+    <div class="flows-list">
+
+      <!-- Flow 1 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">1</div>
+          <div class="flow-header-text">
+            <h3>⚡ Instant Inquiry Response (0–5 Minutes)</h3>
+            <p>Every inquiry — from your website, social bio link, or content landing page — gets a professional, personal-sounding reply before you ever open your inbox.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📋</div>
+              <div class="flow-step-text">
+                <h4>Inquiry Submitted (Any Channel)</h4>
+                <p>Triggers from: website contact form, Instagram or LinkedIn bio link, content opt-in page, or direct email parsing — all funneled into one unified inbox</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📧</div>
+              <div class="flow-step-text">
+                <h4>Instant Acknowledgment Email Sent</h4>
+                <p>A warm, professional reply in your voice — confirms receipt, sets clear next-step expectations, and reassures the prospect they've come to the right place</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📅</div>
+              <div class="flow-step-text">
+                <h4>Discovery Call Booking Link Delivered</h4>
+                <p>One-click calendar link (Calendly/Cal.com) embedded in the response — prospect books their own slot with zero back-and-forth required</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎁</div>
+              <div class="flow-step-text">
+                <h4>Lead Magnet or Value Resource Delivered</h4>
+                <p>A free guide, framework, or resource PDF sent instantly — delivers immediate value, reinforces your authority, and keeps the prospect engaged while they wait</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 2 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">2</div>
+          <div class="flow-header-text">
+            <h3>📅 Discovery Call Booking &amp; Reminder Sequence</h3>
+            <p>Eliminates no-shows and scheduling friction with a smart, automated reminder sequence that keeps prospects engaged from booking to call.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">✅</div>
+              <div class="flow-step-text">
+                <h4>Booking Confirmed Immediately</h4>
+                <p>Confirmation email and calendar invite sent the moment they book, including a short pre-call questionnaire to qualify the prospect and prepare you for the conversation</p>
+              </div>
+            </div>
+          </div>
+          <div class="flow-timeline">
+            <div class="tl-node">
+              <div class="tl-dot">📬</div>
+              <div class="tl-label">Booking</div>
+              <div class="tl-sublabel">Confirmed</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">📧</div>
+              <div class="tl-label">48 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🔔</div>
+              <div class="tl-label">24 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">⏰</div>
+              <div class="tl-label">2 hrs</div>
+              <div class="tl-sublabel">Final Alert</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">📞</div>
+              <div class="tl-label">Call</div>
+              <div class="tl-sublabel">Happens</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">💌</div>
+              <div class="tl-label">1 hr after</div>
+              <div class="tl-sublabel">Follow-up</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 3 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">3</div>
+          <div class="flow-header-text">
+            <h3>🌱 Post-Discovery Nurture Sequence (14 Days)</h3>
+            <p>For every "let me think about it" — a 14-day value-driven sequence that converts hesitant prospects without any manual chasing on your part.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📅</div>
+              <div class="flow-step-text">
+                <h4>Day 1 — Thank You + Call Recap</h4>
+                <p>Reinforces what was discussed on the discovery call, confirms the transformation you offer, and outlines clear next steps</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🏆</div>
+              <div class="flow-step-text">
+                <h4>Day 3 — Client Result Story</h4>
+                <p>An anonymized case study or success story from a client who was in a similar situation — builds confidence that you can deliver the same for them</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">💡</div>
+              <div class="flow-step-text">
+                <h4>Day 5 — Objection Crusher</h4>
+                <p>Directly addresses the most common hesitations — "is this the right time?", "can I afford this?", "will it work for me?" — written in a natural, conversational tone</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎁</div>
+              <div class="flow-step-text">
+                <h4>Day 7 — Free Value Drop</h4>
+                <p>A practical resource, checklist, or insight pulled from your expertise — demonstrates what working with you looks and feels like</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">⭐</div>
+              <div class="flow-step-text">
+                <h4>Day 10 — Social Proof &amp; Credibility</h4>
+                <p>Client testimonials, results, and credentials — framed to reinforce that choosing you is a safe and smart decision</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🤝</div>
+              <div class="flow-step-text">
+                <h4>Day 14 — Soft Close</h4>
+                <p>"Still want to move forward?" — a low-pressure final touchpoint that re-opens the door and invites them to book another call or ask any remaining questions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 4 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">4</div>
+          <div class="flow-header-text">
+            <h3>📩 Proposal Delivery &amp; Follow-Up Automation</h3>
+            <p>Proposals get delivered, followed up, and signed automatically — so deals never die in inboxes waiting for a manual nudge that never comes.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📄</div>
+              <div class="flow-step-text">
+                <h4>Proposal Auto-Delivered Post-Call</h4>
+                <p>Sent within 30 minutes of the discovery call ending — while the conversation is still fresh and the prospect's excitement is at its peak</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔔</div>
+              <div class="flow-step-text">
+                <h4>Follow-Up Sequence (Day 2 → Day 5 → Day 9)</h4>
+                <p>Three gentle follow-ups with different angles — clarity on the offer, a client testimonial for reassurance, and a time-sensitive final nudge</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">✍️</div>
+              <div class="flow-step-text">
+                <h4>One-Click Digital Agreement</h4>
+                <p>DocuSign or PandaDoc integration — prospect can review and sign your service agreement from any device in under two minutes</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">💳</div>
+              <div class="flow-step-text">
+                <h4>Payment Link + Auto-Onboarding Triggered</h4>
+                <p>Payment link sent on agreement signature — confirmed payment automatically triggers your welcome sequence, intake forms, and first session scheduling</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 5 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">5</div>
+          <div class="flow-header-text">
+            <h3>🌟 Client Referral &amp; Testimonial Automation</h3>
+            <p>Turns your happiest clients into your best sales channel — systematically generating referrals and testimonials without you ever having to ask awkwardly.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">🎉</div>
+              <div class="flow-step-text">
+                <h4>Milestone Trigger — Engagement Complete</h4>
+                <p>When a client completes a program milestone or reaches a key outcome, the referral flow automatically activates — catching them at peak satisfaction</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">⭐</div>
+              <div class="flow-step-text">
+                <h4>Testimonial Request Sent</h4>
+                <p>A friendly, low-friction request for a written or video testimonial — with a simple form that takes less than two minutes to complete</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🗣️</div>
+              <div class="flow-step-text">
+                <h4>Referral Ask — Personalized &amp; Easy</h4>
+                <p>A personal email with a pre-written referral message they can forward — makes it effortless for happy clients to recommend you to their network</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔗</div>
+              <div class="flow-step-text">
+                <h4>Referral Tracked &amp; Rewarded</h4>
+                <p>Each referral is tracked through the CRM. Optional reward or acknowledgment sent when a referral converts — creates a positive loop that keeps working indefinitely</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON ───────────────────────────────────────── -->
+<section id="comparison">
+  <div class="container">
+    <div class="section-label">Before vs. After</div>
+    <h2 class="section-title">What Changes When the System Is In Place</h2>
+    <p class="section-sub">Here's an honest look at how a coaching or consulting practice operates without automation versus with a complete system running behind it.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th class="col-bad">❌ Without Automation</th>
+          <th class="col-good">✅ With Automation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Inquiry response time</td>
+          <td class="col-bad">Hours or days via personal inbox</td>
+          <td class="col-good">Under 5 minutes, 24/7, every day</td>
+        </tr>
+        <tr>
+          <td>Discovery call booking</td>
+          <td class="col-bad">Manual email ping-pong over availability</td>
+          <td class="col-good">One-click self-booking with instant confirmation</td>
+        </tr>
+        <tr>
+          <td>No-show rate</td>
+          <td class="col-bad">High — no reminder system in place</td>
+          <td class="col-good">Under 5% with 3-touch reminder sequence</td>
+        </tr>
+        <tr>
+          <td>Follow-up on undecided prospects</td>
+          <td class="col-bad">Forgotten after the first touchpoint</td>
+          <td class="col-good">14-day automated nurture sequence runs automatically</td>
+        </tr>
+        <tr>
+          <td>Proposal follow-up</td>
+          <td class="col-bad">Manual, inconsistent, often skipped</td>
+          <td class="col-good">3-touch automated sequence on a precise schedule</td>
+        </tr>
+        <tr>
+          <td>Content lead capture</td>
+          <td class="col-bad">Viewers leave with no way to re-engage</td>
+          <td class="col-good">Every content viewer can opt in to your list</td>
+        </tr>
+        <tr>
+          <td>Client referrals</td>
+          <td class="col-bad">Random, dependent on you asking at the right moment</td>
+          <td class="col-good">Systematic ask triggered automatically at peak satisfaction</td>
+        </tr>
+        <tr>
+          <td>Testimonial collection</td>
+          <td class="col-bad">Rarely collected — always feels awkward to ask</td>
+          <td class="col-good">Automated request sent at the perfect time, every time</td>
+        </tr>
+        <tr>
+          <td>Lead &amp; inquiry tracking</td>
+          <td class="col-bad">Personal inbox with no visibility or history</td>
+          <td class="col-good">Unified CRM with full contact history and pipeline view</td>
+        </tr>
+        <tr>
+          <td>Time spent on admin &amp; follow-up</td>
+          <td class="col-bad">Several hours per week of manual work</td>
+          <td class="col-good">Under 30 minutes per week to review and respond</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES ─────────────────────────────────────── -->
+<section id="deliverables">
+  <div class="container">
+    <div class="section-label">What You Get</div>
+    <h2 class="section-title">Everything Included. Nothing Left to Figure Out.</h2>
+    <p class="section-sub">We don't hand you tools and walk away. We build your entire system, write your sequences in your voice, and make sure every piece is working before we hand it over.</p>
+
+    <div class="deliverables-grid">
+      <div class="deliverable-card">
+        <div class="deliverable-icon">⚙️</div>
+        <h3>Full System Build &amp; Setup</h3>
+        <p>Every automation configured, connected, and tested — CRM, email sequences, booking system, proposal delivery, and payment integration all working together.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">✍️</div>
+        <h3>All Sequence Copy Written For You</h3>
+        <p>Every email written to match your existing voice and tone — inquiry responses, nurture sequences, proposal follow-ups, referral asks, and onboarding messages.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🔗</div>
+        <h3>Multi-Channel Integration</h3>
+        <p>Website, social bio links, content pages, email, booking tool, proposal software, and payment system — all connected into a single seamless pipeline.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🧪</div>
+        <h3>Full QA Before Go-Live</h3>
+        <p>Every flow tested end-to-end across all channels and edge cases. Nothing goes live until we've confirmed it works exactly as designed.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🎓</div>
+        <h3>Handover Training Session</h3>
+        <p>A 1:1 walkthrough of the complete system so you can monitor, update, and expand it independently — no technical background required.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🛡️</div>
+        <h3>4-Week Post-Launch Support</h3>
+        <p>We stay on after go-live to monitor performance, fix any issues, and optimize sequences based on real open rates, click data, and booking conversion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ─────────────────────────────────────────── -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-label">Implementation</div>
+    <h2 class="section-title">Live in 4 Weeks</h2>
+    <p class="section-sub">A structured 4-week build process — then 4 weeks of active support to optimize and improve based on real data from your practice.</p>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>1</div>
+        <div class="tl-content">
+          <h3>Discovery &amp; Strategy</h3>
+          <p>Deep-dive into your current inquiry process, content channels, and client journey. CRM and tech stack setup begins. We map every touchpoint and define the exact automation logic for your practice.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>2</div>
+        <div class="tl-content">
+          <h3>Content &amp; Sequence Writing</h3>
+          <p>All email sequences written in your voice, reviewed with you, and approved before building. Automation maps and flow logic finalized. Lead magnet or value resource prepared if needed.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>3</div>
+        <div class="tl-content">
+          <h3>Build, Integrate &amp; Test</h3>
+          <p>All 5 automation flows built, connected, and tested across every channel and scenario. Booking system, CRM, proposal tool, and payment integrations all verified end-to-end.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>4</div>
+        <div class="tl-content">
+          <h3>Go-Live + Handover</h3>
+          <p>System goes live. Full 1:1 walkthrough and training session delivered. You begin capturing every inquiry, nurturing every prospect, and generating referrals — automatically.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>5–8</div>
+        <div class="tl-content">
+          <h3>Support, Optimize &amp; Report</h3>
+          <p>Monitor open rates, booking rates, and conversion data. Refine sequences based on real results from your audience. Weekly check-ins to ensure everything is performing as expected.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-label" style="background: rgba(244,98,46,0.15); border-color: rgba(244,98,46,0.3); color: var(--gold-light);">Let's Talk</div>
+    <h2 class="section-title" style="color: var(--white);">Ready to Stop Losing Prospects to Silence?</h2>
+    <p class="section-sub">
+      Book a free 30-minute strategy call. We'll map out exactly which automations will have the highest impact on your practice — no pressure, no pitch, just a clear and honest plan.
+    </p>
+    <div style="text-align: center; margin-top: 16px;">
+      <a href="https://calendly.com/thinktoshareitsolutions/book-a-demo" target="_blank" rel="noopener" class="cta-btn">Book a Free Strategy Call →</a>
+      <p class="cta-note">No commitment required · 30 minutes · Free</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer>
+  <p>Prepared by <strong>Think To Share</strong> &nbsp;·&nbsp; Growth Done Thoughtfully &nbsp;·&nbsp; Proposal valid until <strong>August 3, 2026</strong> &nbsp;·&nbsp; Questions? <strong>contact@thinktoshare.com</strong></p>
+  <p style="margin-top: 8px; font-size: 12px; color: #475569;">All statistics sourced from industry research. Results vary based on niche, audience, and existing processes.</p>
+</footer>
+
+</body>
+</html>

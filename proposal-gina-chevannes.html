@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Automation Proposal – Gina Chevannes, KWPMC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f172a;
+      --navy2: #1e293b;
+      --gold: #f4622e;
+      --gold-light: #ff8b5e;
+      --gold-dark: #c94a1e;
+      --white: #ffffff;
+      --offwhite: #f8fafc;
+      --gray100: #f1f5f9;
+      --gray200: #e2e8f0;
+      --gray400: #94a3b8;
+      --gray600: #475569;
+      --gray800: #1e293b;
+      --green: #10b981;
+      --red: #ef4444;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(15,23,42,0.08);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--offwhite);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,23,42,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(244,98,46,0.15);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray400);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all .2s;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+      background: rgba(244,98,46,0.1);
+    }
+
+    /* ── SECTIONS ──────────────────────────────────────── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-block;
+      background: rgba(244,98,46,0.12);
+      color: var(--gold-dark);
+      border: 1px solid rgba(244,98,46,0.25);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray600);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      padding: 100px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 700px 500px at 60% 40%, rgba(244,98,46,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,98,46,0.12);
+      border: 1px solid rgba(244,98,46,0.3);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 580px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .hero-metrics {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: var(--gray400);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .hero-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.12);
+      align-self: center;
+    }
+    .hero-prepared {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-prepared-item { display: flex; flex-direction: column; }
+    .hero-prepared-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 4px; }
+    .hero-prepared-value { font-size: 15px; font-weight: 600; color: var(--white); }
+
+    /* ── PROBLEM ───────────────────────────────────────── */
+    #problem { background: var(--white); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    .problem-card {
+      background: var(--offwhite);
+      border: 1px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .problem-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .problem-icon { font-size: 32px; margin-bottom: 14px; }
+    .problem-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+    .problem-card p { font-size: 14px; color: var(--gray600); line-height: 1.65; }
+
+    .stat-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 38px; font-weight: 900; color: var(--gold); letter-spacing: -1px; line-height: 1; }
+    .stat-desc { font-size: 13px; color: #94a3b8; margin-top: 6px; }
+
+    /* ── PIPELINE ──────────────────────────────────────── */
+    #pipeline { background: var(--offwhite); }
+    .pipeline-track {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .pipeline-step {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .pipeline-step:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.1);
+    }
+    .pipeline-step .step-num {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pipeline-step .step-icon { font-size: 28px; margin: 8px 0 10px; }
+    .pipeline-step .step-label { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+    .pipeline-arrow { display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); font-weight: 700; }
+
+    /* ── FLOWS ─────────────────────────────────────────── */
+    #flows { background: var(--white); }
+    .flows-list { display: flex; flex-direction: column; gap: 32px; }
+    .flow-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s;
+    }
+    .flow-card:hover { box-shadow: var(--shadow-lg); }
+    .flow-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 28px 32px;
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--gray200);
+    }
+    .flow-num {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      color: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .flow-header-text h3 { font-size: 19px; font-weight: 800; color: var(--navy); }
+    .flow-header-text p { font-size: 14px; color: var(--gray600); margin-top: 3px; }
+    .flow-body { padding: 28px 32px; }
+    .flow-steps { display: flex; flex-direction: column; gap: 14px; }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--offwhite);
+      border-radius: 10px;
+      border-left: 3px solid var(--gold);
+    }
+    .flow-step-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .flow-step-text h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .flow-step-text p { font-size: 13px; color: var(--gray600); line-height: 1.55; }
+
+    /* timeline inside flow */
+    .flow-timeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .tl-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      min-width: 90px;
+    }
+    .tl-dot {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .tl-label { font-size: 11px; font-weight: 700; color: var(--navy); text-align: center; }
+    .tl-sublabel { font-size: 10px; color: var(--gray400); text-align: center; }
+    .tl-arrow { flex: 1; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); min-width: 20px; }
+
+    /* ── COMPARISON ────────────────────────────────────── */
+    #comparison { background: var(--offwhite); }
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+    .compare-table thead tr {
+      background: var(--navy);
+    }
+    .compare-table thead th {
+      padding: 18px 24px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .compare-table thead th.col-bad { color: #fca5a5; }
+    .compare-table thead th.col-good { color: var(--gold-light); }
+    .compare-table tbody tr { border-bottom: 1px solid var(--gray100); }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table tbody tr:hover { background: var(--offwhite); }
+    .compare-table td {
+      padding: 16px 24px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    .compare-table td:first-child { font-weight: 600; color: var(--navy); }
+    .col-bad { color: var(--red); font-weight: 500; }
+    .col-good { color: var(--green); font-weight: 600; }
+
+    /* ── DELIVERABLES ──────────────────────────────────── */
+    #deliverables { background: var(--white); }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .deliverable-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--offwhite);
+      transition: box-shadow .2s, border-color .2s, transform .2s;
+    }
+    .deliverable-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .deliverable-icon { font-size: 28px; margin-bottom: 12px; }
+    .deliverable-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .deliverable-card p { font-size: 13px; color: var(--gray600); line-height: 1.6; }
+
+    /* ── TIMELINE ──────────────────────────────────────── */
+    #timeline { background: var(--offwhite); }
+    .timeline-list { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(244,98,46,0.1));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .tl-week-dot {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      text-align: center;
+      line-height: 1.2;
+      z-index: 1;
+    }
+    .tl-content {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .tl-content h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .tl-content p { font-size: 14px; color: var(--gray600); }
+
+    /* ── CTA ───────────────────────────────────────────── */
+    #cta {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #0f172a 100%);
+      text-align: center;
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 400px at 50% 50%, rgba(244,98,46,0.06) 0%, transparent 70%);
+    }
+    #cta .section-title { color: var(--white); }
+    #cta .section-sub { color: #94a3b8; margin-left: auto; margin-right: auto; text-align: center; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: all .2s;
+      box-shadow: 0 8px 30px rgba(244,98,46,0.35);
+    }
+    .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(244,98,46,0.45); }
+    .cta-note { font-size: 13px; color: var(--gray400); margin-top: 20px; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer p { font-size: 13px; color: var(--gray400); }
+    footer strong { color: var(--gold); }
+
+    /* ── MOBILE ────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero-metrics { gap: 20px; }
+      .hero-divider { display: none; }
+      .stat-banner { padding: 28px 20px; }
+      .flow-header, .flow-body { padding: 20px; }
+      .compare-table { display: block; overflow-x: auto; }
+      .roi-box { padding: 28px 24px; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Think To Share" height="34" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#flows">Automations</a></li>
+      <li><a href="#comparison">Results</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-badge">🏢 Marketing Automation Proposal — Property Management District Operations</div>
+    <h1 class="hero-title">
+      Turn Every Property Inquiry Into a<br/>
+      <span class="highlight">Signed Management Contract.</span>
+    </h1>
+    <p class="hero-sub">
+      You've spent 20+ years mastering every dimension of commercial property management — from asset management to HOA boards to real estate education. This system captures every owner inquiry, every RFP, and every "let me think about it" — and converts them into long-term management contracts, automatically.
+    </p>
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-value">8×</span>
+        <span class="metric-label">Higher close rate with<br/>sub-5-min inquiry response</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">67%</span>
+        <span class="metric-label">Of property owners choose<br/>the first firm to respond</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">20+ yrs</span>
+        <span class="metric-label">Of expertise with<br/>no systematic pipeline</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">5+ hrs</span>
+        <span class="metric-label">Per week lost to manual<br/>admin and follow-up</span>
+      </div>
+    </div>
+    <div class="hero-prepared">
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared For</span>
+        <span class="hero-prepared-value">Gina Chevannes, District Manager — KWPMC</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared By</span>
+        <span class="hero-prepared-value">Think To Share</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Date</span>
+        <span class="hero-prepared-value">July 3, 2026</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Valid Until</span>
+        <span class="hero-prepared-value">August 3, 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM ──────────────────────────────────────────── -->
+<section id="problem">
+  <div class="container">
+    <div class="section-label">The Real Problem</div>
+    <h2 class="section-title">Where Your District Operation Is Losing Contracts</h2>
+    <p class="section-sub">You have the credentials, the track record, and the network — an FIU master's degree, REOCertified designation, and 20+ years across the full property management spectrum. But without a system that captures and nurtures every opportunity, your authority isn't converting at the rate it should.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">🏠</div>
+        <h3>Property Inquiries Handled Ad-Hoc</h3>
+        <p>New property owner inquiries land in email with no structured intake, no instant response, and no consistent follow-up process. The first competitor to respond professionally wins — whether they deserve to or not.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📋</div>
+        <h3>Owner &amp; HOA Board Communication Is Scattered</h3>
+        <p>Monthly updates, meeting follow-ups, and maintenance notices go out manually — no standardized cadence, no tracking of who received what, and no way to ensure nothing slips through the cracks across multiple properties.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔧</div>
+        <h3>Maintenance Requests Not Systematically Tracked</h3>
+        <p>Tenant maintenance requests arrive through multiple channels — phone, email, text — with no unified intake, no automatic acknowledgment, and no status-update workflow to keep tenants informed automatically.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔑</div>
+        <h3>No Automated New Property Onboarding</h3>
+        <p>Every new managed property requires the same orientation checklist, vendor introductions, and documentation — but it's all done manually each time. A systematic onboarding flow would cut the process from days to hours.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🎓</div>
+        <h3>Real Estate School Network Not Being Nurtured</h3>
+        <p>Your time instructing at South Florida Real Estate School built a valuable referral pipeline. That network of new licensees — potential partners and referral sources — receives no systematic follow-up or value delivery from you.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📄</div>
+        <h3>RFPs &amp; Proposals Submitted Without Follow-Up</h3>
+        <p>After a management proposal goes out, follow-up is inconsistent or forgotten. Without a structured post-proposal sequence, undecided owners go with whoever stayed top-of-mind — and that's often a competitor.</p>
+      </div>
+    </div>
+
+    <div class="stat-banner">
+      <div class="stat-item">
+        <div class="stat-num">67%</div>
+        <div class="stat-desc">of property owners select<br/>the first firm to respond</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5 min</div>
+        <div class="stat-desc">response window for<br/>8× higher contract close rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">80%</div>
+        <div class="stat-desc">of contracts require<br/>5+ follow-up touchpoints</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12 hrs</div>
+        <div class="stat-desc">avg. per week lost to<br/>manual admin in PM operations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PIPELINE ─────────────────────────────────────────── -->
+<section id="pipeline">
+  <div class="container">
+    <div class="section-label">The System</div>
+    <h2 class="section-title">Every Inquiry. Every Property. Fully Tracked.</h2>
+    <p class="section-sub">A 7-stage pipeline that takes a prospective property owner from first contact all the way to signed management agreement and smooth onboarding — without manual chasing at any step.</p>
+
+    <div class="pipeline-track">
+      <div class="pipeline-step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🏢</div>
+        <div class="step-label">Owner Seeks Management</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">2</div>
+        <div class="step-icon">✉️</div>
+        <div class="step-label">Inquiry Submitted</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">3</div>
+        <div class="step-icon">⚡</div>
+        <div class="step-label">Instant Professional Response</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">4</div>
+        <div class="step-icon">📊</div>
+        <div class="step-label">Management Proposal Sent</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">5</div>
+        <div class="step-icon">🔔</div>
+        <div class="step-label">Follow-Up Sequence</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">6</div>
+        <div class="step-icon">✍️</div>
+        <div class="step-label">Contract Signed</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">7</div>
+        <div class="step-icon">🔑</div>
+        <div class="step-label">Property Onboarding Automation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOWS ───────────────────────────────────────────── -->
+<section id="flows">
+  <div class="container">
+    <div class="section-label">5 Automation Flows</div>
+    <h2 class="section-title">What Gets Built For Your District Operation</h2>
+    <p class="section-sub">Five fully configured automation sequences that run 24/7 — handling inquiry response, proposal follow-up, owner onboarding, and ongoing communication across every property you manage.</p>
+
+    <div class="flows-list">
+
+      <!-- Flow 1 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">1</div>
+          <div class="flow-header-text">
+            <h3>⚡ Property Management Inquiry Instant Response (0–5 Minutes)</h3>
+            <p>Every owner inquiry — from your website, referrals, or direct outreach — gets an instant, professional reply that positions KWPMC as the premium choice before any competitor picks up the phone.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📋</div>
+              <div class="flow-step-text">
+                <h4>Inquiry Submitted (Any Channel)</h4>
+                <p>Triggers from: website contact form, referral partner links, direct email intake, LinkedIn profile contact — all routed into one unified CRM</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📧</div>
+              <div class="flow-step-text">
+                <h4>Instant Professional Acknowledgment Sent</h4>
+                <p>A warm, authoritative reply in your voice — confirms receipt, communicates what to expect next, and immediately differentiates your professionalism from competitors</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📅</div>
+              <div class="flow-step-text">
+                <h4>Discovery Call Booking Link Delivered</h4>
+                <p>One-click calendar link so the property owner can schedule a site visit or discovery call immediately — no email back-and-forth required</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎁</div>
+              <div class="flow-step-text">
+                <h4>Property Management Guide Delivered Automatically</h4>
+                <p>"What to Look for in a Commercial Property Manager" — a concise resource that showcases your expertise and builds trust before the first conversation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 2 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">2</div>
+          <div class="flow-header-text">
+            <h3>📅 Proposal Presentation Booking &amp; Confirmation</h3>
+            <p>Eliminates the scheduling friction around management proposal presentations and ensures every prospect shows up prepared and engaged.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">✅</div>
+              <div class="flow-step-text">
+                <h4>Meeting Confirmed Immediately</h4>
+                <p>Confirmation email + calendar invite sent the moment they book, including a brief property intake questionnaire to gather key details in advance</p>
+              </div>
+            </div>
+          </div>
+          <div class="flow-timeline">
+            <div class="tl-node">
+              <div class="tl-dot">📬</div>
+              <div class="tl-label">Booking</div>
+              <div class="tl-sublabel">Confirmed</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">📧</div>
+              <div class="tl-label">48 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🔔</div>
+              <div class="tl-label">24 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">⏰</div>
+              <div class="tl-label">2 hrs</div>
+              <div class="tl-sublabel">Final Alert</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🏢</div>
+              <div class="tl-label">Meeting</div>
+              <div class="tl-sublabel">Happens</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">💌</div>
+              <div class="tl-label">1 hr after</div>
+              <div class="tl-sublabel">Recap Sent</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 3 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">3</div>
+          <div class="flow-header-text">
+            <h3>🌱 Post-Proposal Nurture for Undecided Property Owners (21 Days)</h3>
+            <p>For every "we're still evaluating options" — a 21-day value sequence delivering ROI data, testimonials, and management comparisons that convert hesitant owners without you chasing them manually.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📅</div>
+              <div class="flow-step-text">
+                <h4>Day 1 — Thank You + Proposal Recap</h4>
+                <p>Summarizes the key points from your proposal presentation, reinforces value delivered, and confirms next steps clearly</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📊</div>
+              <div class="flow-step-text">
+                <h4>Day 4 — ROI Data &amp; Performance Benchmarks</h4>
+                <p>Industry data on vacancy reduction, maintenance cost savings, and NOI improvements achieved by professionally managed properties vs. self-managed</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">⭐</div>
+              <div class="flow-step-text">
+                <h4>Day 8 — Owner Testimonial &amp; Case Study</h4>
+                <p>An anonymized success story from a comparable property — showing concrete outcomes from working with a KWPMC district manager</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔍</div>
+              <div class="flow-step-text">
+                <h4>Day 12 — Management Company Comparison Guide</h4>
+                <p>A transparent comparison of what professional management actually includes vs. what most owners assume — positions KWPMC's full-service model as the clear choice</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🏆</div>
+              <div class="flow-step-text">
+                <h4>Day 17 — Credentials &amp; Experience Drop</h4>
+                <p>Your REOCertified designation, FIU master's, and 20+ years of proven experience — framed as the authority advantage that protects their investment</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🤝</div>
+              <div class="flow-step-text">
+                <h4>Day 21 — Soft Close</h4>
+                <p>"Ready to protect your property's performance?" — a low-pressure final touchpoint that reopens the door and invites a decision</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 4 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">4</div>
+          <div class="flow-header-text">
+            <h3>🔑 New Property Onboarding Automation</h3>
+            <p>Every new managed property gets a structured, professional onboarding experience — welcome communications, checklists, and vendor introductions delivered automatically, so nothing is missed.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">🎉</div>
+              <div class="flow-step-text">
+                <h4>Welcome Email to Owner Within 30 Minutes of Signing</h4>
+                <p>Warm welcome, introduction to your team, and a clear outline of the onboarding process — sets a professional tone from day one</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📋</div>
+              <div class="flow-step-text">
+                <h4>Property Onboarding Checklist Auto-Delivered</h4>
+                <p>A structured digital checklist covering key milestones — keys, access codes, vendor contacts, insurance docs, inspection scheduling — assigned and tracked automatically</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔧</div>
+              <div class="flow-step-text">
+                <h4>Preferred Vendor Introduction Sequence</h4>
+                <p>Automated introductions to your trusted vendor network — maintenance, landscaping, HVAC, cleaning — with contact info and preferred pricing notes</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📊</div>
+              <div class="flow-step-text">
+                <h4>30-Day Check-In &amp; First Report Scheduled</h4>
+                <p>Automated scheduling of the first owner report and check-in call — ensures the relationship starts strong and expectations are aligned</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 5 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">5</div>
+          <div class="flow-header-text">
+            <h3>📡 Owner &amp; Board Monthly Communication Automation</h3>
+            <p>Keeps every property owner and HOA board informed, engaged, and confident in your management — through automated monthly reports, updates, and timely renewal reminders.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📬</div>
+              <div class="flow-step-text">
+                <h4>Monthly Property Performance Report</h4>
+                <p>Auto-compiled and delivered on a consistent schedule — occupancy, maintenance status, financials, and upcoming items — keeps owners informed without manual preparation each month</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔔</div>
+              <div class="flow-step-text">
+                <h4>Maintenance &amp; Inspection Update Notifications</h4>
+                <p>Automatic status updates to owners and tenants on open maintenance requests — reduces inbound "what's the status?" calls and demonstrates proactive management</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🗓️</div>
+              <div class="flow-step-text">
+                <h4>HOA Board Meeting Prep &amp; Follow-Up Sequence</h4>
+                <p>Agenda reminders sent automatically before board meetings, followed by meeting notes and action item assignments delivered within 24 hours — keeps governance on track</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📝</div>
+              <div class="flow-step-text">
+                <h4>Contract Renewal Reminder Sequence (90-60-30 Days)</h4>
+                <p>Proactive renewal outreach starting 90 days before management agreement expiry — highlights performance delivered, discusses any updates, and secures renewal before the window closes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON ───────────────────────────────────────── -->
+<section id="comparison">
+  <div class="container">
+    <div class="section-label">Before vs. After</div>
+    <h2 class="section-title">The Difference Automation Makes in District Operations</h2>
+    <p class="section-sub">Here's how a typical month of property management business development and owner communication looks with and without this system in place.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th class="col-bad">❌ Without Automation</th>
+          <th class="col-good">✅ With Automation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Inquiry response time</td>
+          <td class="col-bad">Hours or next business day via email</td>
+          <td class="col-good">Under 5 minutes, 24/7 — any day, any time</td>
+        </tr>
+        <tr>
+          <td>New property inquiries converted (of 20/mo)</td>
+          <td class="col-bad">6–8 contracts closed</td>
+          <td class="col-good">14–16 contracts closed</td>
+        </tr>
+        <tr>
+          <td>Post-proposal follow-up</td>
+          <td class="col-bad">1–2 manual emails, then forgotten</td>
+          <td class="col-good">21-day automated sequence with ROI data &amp; social proof</td>
+        </tr>
+        <tr>
+          <td>New property onboarding time</td>
+          <td class="col-bad">3–5 days of manual coordination</td>
+          <td class="col-good">Same-day automated welcome, checklists, &amp; vendor intros</td>
+        </tr>
+        <tr>
+          <td>Owner monthly communication</td>
+          <td class="col-bad">Manual, inconsistent — reactive when owners call</td>
+          <td class="col-good">Automated monthly reports delivered on schedule</td>
+        </tr>
+        <tr>
+          <td>HOA board meeting follow-up</td>
+          <td class="col-bad">Notes sent when time permits</td>
+          <td class="col-good">Action items auto-assigned and delivered within 24 hrs</td>
+        </tr>
+        <tr>
+          <td>Contract renewal awareness</td>
+          <td class="col-bad">Discovered at or after expiry</td>
+          <td class="col-good">90-60-30 day automated renewal sequence</td>
+        </tr>
+        <tr>
+          <td>Referral network nurturing</td>
+          <td class="col-bad">No systematic outreach to real estate connections</td>
+          <td class="col-good">Ongoing value delivery to agents and school alumni</td>
+        </tr>
+        <tr>
+          <td>Weekly admin time spent on communication</td>
+          <td class="col-bad">8–12 hours per week</td>
+          <td class="col-good">Under 2 hours per week</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES ─────────────────────────────────────── -->
+<section id="deliverables">
+  <div class="container">
+    <div class="section-label">What You Get</div>
+    <h2 class="section-title">Everything Included. Nothing Left to Configure.</h2>
+    <p class="section-sub">We don't hand you a toolkit and walk away. We build your entire system, write every sequence in your professional voice, and verify every flow works before go-live.</p>
+
+    <div class="deliverables-grid">
+      <div class="deliverable-card">
+        <div class="deliverable-icon">⚙️</div>
+        <h3>Full System Build &amp; Configuration</h3>
+        <p>Every automation built, connected, and tested — CRM, email intake, calendar booking, proposal delivery, and owner communication all wired together into one unified pipeline.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">✍️</div>
+        <h3>All Sequence Copy Written For You</h3>
+        <p>Every email crafted to match your professional tone — inquiry responses, onboarding welcomes, nurture sequences, owner reports, and renewal outreach. Written once, runs automatically.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🔗</div>
+        <h3>Multi-Channel Integration</h3>
+        <p>Website, email intake, calendar, e-signature, and CRM — all connected. Inquiries from any source route into the same pipeline so nothing falls through the cracks.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🧪</div>
+        <h3>End-to-End Testing Before Launch</h3>
+        <p>Every flow tested across all five automations before anything goes live. You'll see it working in a sandbox before it touches a real prospect or owner.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🎓</div>
+        <h3>Handover Training &amp; Documentation</h3>
+        <p>A 1:1 walkthrough of every automation so you can manage, update, and expand the system independently. Written documentation provided for your team.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🛡️</div>
+        <h3>60-Day Post-Launch Support</h3>
+        <p>We stay on to monitor performance, fix any issues, and optimize sequences based on real open rates, response data, and conversion feedback from your actual pipeline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ─────────────────────────────────────────── -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-label">Implementation</div>
+    <h2 class="section-title">Live in 4 Weeks</h2>
+    <p class="section-sub">A structured 4-week build process — then 4 weeks of active support and optimization before you run independently.</p>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>1</div>
+        <div class="tl-content">
+          <h3>Discovery &amp; Strategy</h3>
+          <p>Deep-dive into your current inquiry process, owner communication workflows, and onboarding steps. CRM and tech stack setup begins. We map every touchpoint specific to your district operation.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>2</div>
+        <div class="tl-content">
+          <h3>Sequence Writing &amp; Approval</h3>
+          <p>All email sequences drafted — inquiry responses, proposal nurture, owner onboarding, monthly reports, and renewal outreach. Reviewed and approved by you before any build begins.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>3</div>
+        <div class="tl-content">
+          <h3>Build, Integrate &amp; Test</h3>
+          <p>All 5 automation flows built, connected across your systems, and tested end-to-end. Every scenario — new inquiry, signed contract, missed meeting, renewal window — is verified before go-live.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>4</div>
+        <div class="tl-content">
+          <h3>Go-Live + Handover Training</h3>
+          <p>System goes live. Full walkthrough and 1:1 training session with you and any team members who will manage it. Your pipeline starts capturing and converting automatically from day one.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>5–8</div>
+        <div class="tl-content">
+          <h3>Support, Optimize &amp; Report</h3>
+          <p>We monitor open rates, booking rates, and conversion metrics. Sequences refined based on real data. Weekly check-ins to ensure your district operation is running at full capacity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-label" style="background: rgba(244,98,46,0.15); border-color: rgba(244,98,46,0.3); color: var(--gold-light);">Let's Talk</div>
+    <h2 class="section-title" style="color: var(--white);">Ready to Turn Inquiries Into Long-Term Management Contracts?</h2>
+    <p class="section-sub">
+      Book a free 30-minute strategy call. We'll map out exactly which automations will have the highest impact on your district operation — no pressure, no pitch, just a clear plan tailored to property management.
+    </p>
+    <div style="text-align: center; margin-top: 16px;">
+      <a href="https://calendly.com/thinktoshareitsolutions/book-a-demo" target="_blank" rel="noopener" class="cta-btn">Book a Free Strategy Call →</a>
+      <p class="cta-note">No commitment required · 30 minutes · Free</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer>
+  <p>Prepared by <strong>Think To Share</strong> &nbsp;·&nbsp; Growth Done Thoughtfully &nbsp;·&nbsp; Proposal valid until <strong>August 3, 2026</strong> &nbsp;·&nbsp; Questions? <strong>contact@thinktoshare.com</strong></p>
+  <p style="margin-top: 8px; font-size: 12px; color: #475569;">All statistics sourced from industry research. Results vary based on portfolio size, market, and existing processes.</p>
+</footer>
+
+</body>
+</html>
