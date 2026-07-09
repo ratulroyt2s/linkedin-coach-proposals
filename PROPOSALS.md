@@ -55,5 +55,22 @@ All proposals are tailored single-page marketing automation pitches built by Thi
 
 ---
 
-**Total proposals: 28**  
+## Batch 4 — Real Estate & Mortgage Professionals (10 proposals)
+
+| Name | Niche / Company | Live URL |
+|------|----------------|----------|
+| David A. Krebs | DAK Mortgage — jumbo/non-QM mortgage broker, Miami luxury market | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-david-krebs.html) |
+| Ben Israel | Southern Tradition Real Estate — President/Principal Broker, NW Arkansas | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-ben-israel.html) |
+| Lorenzo Bonina, CCIM | Pegasus Real Estate Group — commercial RE partner, Orange County CA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-lorenzo-bonina.html) |
+| Gisele Costa | HCLTech — service program manager (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-gisele-costa.html) |
+| Dario Medina | Better Homes & Gardens County Line — Managing Broker, Hinsdale IL | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-dario-medina.html) |
+| Jim Dolan | Team JD Concepts — RE broker & life insurance/annuities, San Diego | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-jim-dolan.html) |
+| M. Arasool | No public profile data found (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-m-arasool.html) |
+| Hasan Labash | No public profile data found (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-hasan-labash.html) |
+| Michael Reigner | Kimco Realty — Director of Real Estate (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-michael-reigner.html) |
+| Brian Grajek | Prophet Homes — off-market cash-buyer broker, Orange County CA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-brian-grajek.html) |
+
+---
+
+**Total proposals: 38**  
 **Prepared by:** Think To Share · [thinktoshare.com](https://thinktoshare.com) · contact@thinktoshare.com
