@@ -72,5 +72,22 @@ All proposals are tailored single-page marketing automation pitches built by Thi
 
 ---
 
-**Total proposals: 38**  
+## Batch 5 — Real Estate Professionals (10 proposals)
+
+| Name | Niche / Company | Live URL |
+|------|----------------|----------|
+| Latasha Murray | Park Way Real Estate & Investment Group — GC & real estate developer, Quincy MA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-latasha-murray.html) |
+| Barbie Li | B Square Realty / Barbie Li Team — $1B+ producing broker, Flushing NY | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-barbie-li.html) |
+| Joel Friedland | Brit Properties LLC — industrial RE syndication, Chicago, 42 yrs exp | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-joel-friedland.html) |
+| Jeff Gregg | Dune Companies — commercial real estate, Columbus OH, 27+ yrs exp | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-jeff-gregg.html) |
+| Toby Gallegos | TopCity Realty LLC — residential agent, Topeka KS | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-toby-gallegos.html) |
+| Stacey Williams | Compass — Hawaii luxury real estate specialist, Honolulu HI | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-stacey-williams.html) |
+| Bilal Bahadar | Noble Horizon — luxury real estate property consultant, Dubai UAE | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-bilal-bahadar.html) |
+| Valerie Shalomoff | VS Properties (Keller Williams) — 23 yrs exp, Queens/LI luxury waterfront | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-valerie-shalomoff.html) |
+| Todd Riddle | Keller Williams Lake Norman — residential broker, Mooresville NC | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-todd-riddle.html) |
+| Zed LaCour | PMI Integrity Properties — broker/property mgmt, Baton Rouge & Lafayette LA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-zed-lacour.html) |
+
+---
+
+**Total proposals: 48**  
 **Prepared by:** Think To Share · [thinktoshare.com](https://thinktoshare.com) · contact@thinktoshare.com
