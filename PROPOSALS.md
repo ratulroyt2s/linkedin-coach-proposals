@@ -89,5 +89,13 @@ All proposals are tailored single-page marketing automation pitches built by Thi
 
 ---
 
-**Total proposals: 48**  
+## Batch 6 — Finance Consulting & Wealth Coaching (1 proposal)
+
+| Name | Niche / Company | Live URL |
+|------|----------------|----------|
+| Suraj Fernando | Strategic Finance Consultant & Wealth Coach — Clarity Calls / WealthWay Academy (surajfernando.com) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-suraj-fernando.html) |
+
+---
+
+**Total proposals: 49**  
 **Prepared by:** Think To Share · [thinktoshare.com](https://thinktoshare.com) · contact@thinktoshare.com
