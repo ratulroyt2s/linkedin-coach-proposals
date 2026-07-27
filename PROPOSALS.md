@@ -89,13 +89,22 @@ All proposals are tailored single-page marketing automation pitches built by Thi
 
 ---
 
-## Batch 6 — Finance Consulting & Wealth Coaching (1 proposal)
+## Batch 6 — Mixed Prospects: Real Estate, Finance, Coaching & HR (10 proposals)
 
 | Name | Niche / Company | Live URL |
 |------|----------------|----------|
+| Christopher R. Smith | AZ Realty & Rentals — sales/rentals professional, Tucson AZ | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-christopher-smith.html) |
+| Elias Kassis | Boston Pads — VP of Sales, rentals & multifamily investing, Boston MA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-elias-kassis.html) |
+| Michael Burke | No public profile data found (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-michael-burke.html) |
+| Jessica Leitzel | NorthstarPMO — Senior HR Consultant, workplace culture & DEI | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-jessica-leitzel.html) |
+| Scott Maly | Scott Maly Consulting / Natural Persuasion Technologies — NLP sales & leadership training, Milwaukee WI | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-scott-maly.html) |
+| Varsha Nagpal | Skin Laundry — skincare clinic/wellness business (generic-leaning, ambiguous profile) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-varsha-nagpal.html) |
+| Lindsey Bourne | Lindsey Bourne Coaching — relational leadership & emotional wellness coach, Oakland CA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-lindsey-bourne.html) |
+| Erick Calderón | Arcsa Capital — Board Member, Family Office / private capital, Mexico City | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-erick-calderon.html) |
 | Suraj Fernando | Strategic Finance Consultant & Wealth Coach — Clarity Calls / WealthWay Academy (surajfernando.com) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-suraj-fernando.html) |
+| Rakhi Shastri | No public profile data found (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-rakhi-shastri.html) |
 
 ---
 
-**Total proposals: 49**  
+**Total proposals: 58**  
 **Prepared by:** Think To Share · [thinktoshare.com](https://thinktoshare.com) · contact@thinktoshare.com
