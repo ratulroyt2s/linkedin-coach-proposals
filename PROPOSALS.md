@@ -106,5 +106,23 @@ All proposals are tailored single-page marketing automation pitches built by Thi
 
 ---
 
-**Total proposals: 58**  
+## Batch 7 — Coaches, Consultants & Finance Professionals (11 proposals)
+
+| Name | Niche / Company | Live URL |
+|------|----------------|----------|
+| LaShawnda Rodgers, MBA | Rodgers Global Leadership Consortium — leadership coach, DEI advocate, corporate trainer | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-lashawnda-rodgers.html) |
+| Tracey Abbott | CEO Coach & Advisor — ex-PE Operating Partner (Mubadala, Partners Group), "Risk Smarter" brand | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-tracey-abbott.html) |
+| Dr. (Sam) Swapna Sinha | Strategism Inc. — Founder/CEO, Fortune 500 corporate coach & keynote speaker | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-sam-sinha.html) |
+| Lynn Smith | Lynn Smith Media & Communications — TEDx speaker, "The CEO Whisperer," media/communications coach | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-lynn-smith.html) |
+| Dr. Shermnae Jones | Dr. Shermnae D. Jones, LLC / Destiny Doula™ — Executive & Transformation Coach, Atlanta GA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-shermnae-jones.html) |
+| Shak Anwar | Business English Coaches — job interview & business English coaching, Manchester UK | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-shak-anwar.html) |
+| Peaches Udoma | Just Peachy Productions, LLC — Executive Coach, lead-gen & social-to-referral strategy, Boston | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-peaches-udoma.html) |
+| Stefan Steinberger | Berton Capital / Rea Capinigro Family Board — real estate fund & family-office advisory, NYC | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-stefan-steinberger.html) |
+| Steve H. (Stephen Harvey) | Westerby Group — Group Managing Director, Independent Financial Adviser (45 yrs), UK | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-steve-h.html) |
+| Megan Feely-Jeddeloh | No fitting public profile found — in-house corporate role (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-megan-feely-jeddeloh.html) |
+| Michael Anthony Francis | "The Blind Economist" / Macroeconomic Solutions — CEO, VC consultant & daily econ newsletter | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-michael-francis.html) |
+
+---
+
+**Total proposals: 69**  
 **Prepared by:** Think To Share · [thinktoshare.com](https://thinktoshare.com) · contact@thinktoshare.com
