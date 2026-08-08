@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Automation Proposal – Nirmal Patel, Hawk Family Office</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f172a;
+      --navy2: #1e293b;
+      --gold: #f4622e;
+      --gold-light: #ff8b5e;
+      --gold-dark: #c94a1e;
+      --white: #ffffff;
+      --offwhite: #f8fafc;
+      --gray100: #f1f5f9;
+      --gray200: #e2e8f0;
+      --gray400: #94a3b8;
+      --gray600: #475569;
+      --gray800: #1e293b;
+      --green: #10b981;
+      --red: #ef4444;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(15,23,42,0.08);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--offwhite);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,23,42,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(244,98,46,0.15);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray400);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all .2s;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+      background: rgba(244,98,46,0.1);
+    }
+
+    /* ── SECTIONS ──────────────────────────────────────── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-block;
+      background: rgba(244,98,46,0.12);
+      color: var(--gold-dark);
+      border: 1px solid rgba(244,98,46,0.25);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray600);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      padding: 100px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 700px 500px at 60% 40%, rgba(244,98,46,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,98,46,0.12);
+      border: 1px solid rgba(244,98,46,0.3);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 580px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .hero-metrics {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: var(--gray400);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .hero-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.12);
+      align-self: center;
+    }
+    .hero-prepared {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-prepared-item { display: flex; flex-direction: column; }
+    .hero-prepared-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 4px; }
+    .hero-prepared-value { font-size: 15px; font-weight: 600; color: var(--white); }
+
+    /* ── PROBLEM ───────────────────────────────────────── */
+    #problem { background: var(--white); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    .problem-card {
+      background: var(--offwhite);
+      border: 1px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .problem-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .problem-icon { font-size: 32px; margin-bottom: 14px; }
+    .problem-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+    .problem-card p { font-size: 14px; color: var(--gray600); line-height: 1.65; }
+
+    .stat-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 38px; font-weight: 900; color: var(--gold); letter-spacing: -1px; line-height: 1; }
+    .stat-desc { font-size: 13px; color: #94a3b8; margin-top: 6px; }
+
+    /* ── PIPELINE ──────────────────────────────────────── */
+    #pipeline { background: var(--offwhite); }
+    .pipeline-track {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .pipeline-step {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .pipeline-step:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.1);
+    }
+    .pipeline-step .step-num {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pipeline-step .step-icon { font-size: 28px; margin: 8px 0 10px; }
+    .pipeline-step .step-label { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+    .pipeline-arrow { display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); font-weight: 700; }
+
+    /* ── FLOWS ─────────────────────────────────────────── */
+    #flows { background: var(--white); }
+    .flows-list { display: flex; flex-direction: column; gap: 32px; }
+    .flow-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s;
+    }
+    .flow-card:hover { box-shadow: var(--shadow-lg); }
+    .flow-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 28px 32px;
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--gray200);
+    }
+    .flow-num {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      color: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .flow-header-text h3 { font-size: 19px; font-weight: 800; color: var(--navy); }
+    .flow-header-text p { font-size: 14px; color: var(--gray600); margin-top: 3px; }
+    .flow-body { padding: 28px 32px; }
+    .flow-steps { display: flex; flex-direction: column; gap: 14px; }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--offwhite);
+      border-radius: 10px;
+      border-left: 3px solid var(--gold);
+    }
+    .flow-step-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .flow-step-text h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .flow-step-text p { font-size: 13px; color: var(--gray600); line-height: 1.55; }
+
+    /* timeline inside flow */
+    .flow-timeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .tl-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      min-width: 90px;
+    }
+    .tl-dot {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .tl-label { font-size: 11px; font-weight: 700; color: var(--navy); text-align: center; }
+    .tl-sublabel { font-size: 10px; color: var(--gray400); text-align: center; }
+    .tl-arrow { flex: 1; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); min-width: 20px; }
+
+    /* ── COMPARISON ────────────────────────────────────── */
+    #comparison { background: var(--offwhite); }
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+    .compare-table thead tr {
+      background: var(--navy);
+    }
+    .compare-table thead th {
+      padding: 18px 24px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .compare-table thead th.col-bad { color: #fca5a5; }
+    .compare-table thead th.col-good { color: var(--gold-light); }
+    .compare-table tbody tr { border-bottom: 1px solid var(--gray100); }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table tbody tr:hover { background: var(--offwhite); }
+    .compare-table td {
+      padding: 16px 24px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    .compare-table td:first-child { font-weight: 600; color: var(--navy); }
+    .col-bad { color: var(--red); font-weight: 500; }
+    .col-good { color: var(--green); font-weight: 600; }
+
+    /* ── DELIVERABLES ──────────────────────────────────── */
+    #deliverables { background: var(--white); }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .deliverable-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--offwhite);
+      transition: box-shadow .2s, border-color .2s, transform .2s;
+    }
+    .deliverable-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .deliverable-icon { font-size: 28px; margin-bottom: 12px; }
+    .deliverable-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .deliverable-card p { font-size: 13px; color: var(--gray600); line-height: 1.6; }
+
+    /* ── TIMELINE ──────────────────────────────────────── */
+    #timeline { background: var(--offwhite); }
+    .timeline-list { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(244,98,46,0.1));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .tl-week-dot {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      text-align: center;
+      line-height: 1.2;
+      z-index: 1;
+    }
+    .tl-content {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .tl-content h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .tl-content p { font-size: 14px; color: var(--gray600); }
+
+    /* ── PRICING ───────────────────────────────────────── */
+    #pricing { background: var(--white); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    .pricing-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .pricing-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.15), var(--shadow-lg);
+    }
+    .pricing-tag {
+      background: var(--gold);
+      color: var(--navy);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 16px;
+    }
+    .pricing-header {
+      padding: 28px 28px 20px;
+      border-bottom: 1px solid var(--gray100);
+    }
+    .pricing-name { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .pricing-desc { font-size: 13px; color: var(--gray600); }
+    .pricing-price {
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--gray100);
+    }
+    .price-row { display: flex; align-items: baseline; gap: 6px; }
+    .price-currency { font-size: 20px; font-weight: 700; color: var(--gray600); }
+    .price-amount { font-size: 44px; font-weight: 900; color: var(--navy); letter-spacing: -2px; line-height: 1; }
+    .price-type { font-size: 13px; color: var(--gray400); }
+    .pricing-body { padding: 24px 28px; }
+    .pricing-includes { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 14px; }
+    .pricing-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: var(--gray800);
+    }
+    .pricing-item .pi-check { color: var(--green); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .pricing-cta {
+      display: block;
+      text-align: center;
+      margin: 4px 28px 28px;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .2s;
+      background: var(--navy);
+      color: var(--gold);
+      border: 2px solid var(--navy);
+    }
+    .pricing-cta:hover { background: transparent; color: var(--navy); }
+    .pricing-card.featured .pricing-cta {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+    .pricing-card.featured .pricing-cta:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: var(--white); }
+
+    .roi-box {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .roi-icon { font-size: 48px; flex-shrink: 0; }
+    .roi-text h3 { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .roi-text p { font-size: 15px; color: #94a3b8; line-height: 1.6; }
+    .roi-text strong { color: var(--gold); }
+
+    /* ── CTA ───────────────────────────────────────────── */
+    #cta {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #0f172a 100%);
+      text-align: center;
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 400px at 50% 50%, rgba(244,98,46,0.06) 0%, transparent 70%);
+    }
+    #cta .section-title { color: var(--white); }
+    #cta .section-sub { color: #94a3b8; margin-left: auto; margin-right: auto; text-align: center; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: all .2s;
+      box-shadow: 0 8px 30px rgba(244,98,46,0.35);
+    }
+    .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(244,98,46,0.45); }
+    .cta-note { font-size: 13px; color: var(--gray400); margin-top: 20px; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer p { font-size: 13px; color: var(--gray400); }
+    footer strong { color: var(--gold); }
+
+    /* ── MOBILE ────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero-metrics { gap: 20px; }
+      .hero-divider { display: none; }
+      .stat-banner { padding: 28px 20px; }
+      .flow-header, .flow-body { padding: 20px; }
+      .compare-table { display: block; overflow-x: auto; }
+      .roi-box { padding: 28px 24px; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Think To Share" height="34" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#flows">Automations</a></li>
+      <li><a href="#comparison">Results</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-badge">🤝 Marketing Automation Proposal — Family Office &amp; Private Wealth</div>
+    <h1 class="hero-title">
+      Turn Trusted Introductions Into<br/>
+      <span class="highlight">Onboarded Relationships.</span>
+    </h1>
+    <p class="hero-sub">
+      Hawk Family Office earns new relationships almost entirely through trust and referral — not cold outreach. This system makes sure every introduction gets a prompt, discreet, high-touch response, and quietly nurtures each prospective family through to onboarding, without ever feeling automated.
+    </p>
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-value">9 in 10</span>
+        <span class="metric-label">New family office clients<br/>arrive through referral</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">8×</span>
+        <span class="metric-label">Higher conversion with<br/>sub-1-hour response</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">Months</span>
+        <span class="metric-label">Typical consideration cycle<br/>for a new family relationship</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">0</span>
+        <span class="metric-label">Systematic way most firms<br/>track referral pipelines today</span>
+      </div>
+    </div>
+    <div class="hero-prepared">
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared For</span>
+        <span class="hero-prepared-value">Nirmal Patel, Hawk Family Office</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared By</span>
+        <span class="hero-prepared-value">Think To Share</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Date</span>
+        <span class="hero-prepared-value">August 8, 2026</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Valid Until</span>
+        <span class="hero-prepared-value">September 8, 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM ──────────────────────────────────────────── -->
+<section id="problem">
+  <div class="container">
+    <div class="section-label">The Real Problem</div>
+    <h2 class="section-title">Where Trusted Introductions Quietly Go Cold</h2>
+    <p class="section-sub">Hawk Family Office's reputation brings in the introductions that matter most — from advisors, lawyers, and existing families. But without a discreet, systematic way to respond and nurture, some of that trust never converts into an onboarded relationship.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">🤝</div>
+        <h3>Referrals Are Everything — And Fragile</h3>
+        <p>A family office wins clients almost entirely through trust and referral, not cold outreach. How the very first response lands sets the tone for the entire relationship — there's no second chance to make that impression.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">⏱️</div>
+        <h3>Every Hour of Delay Reads as Risk</h3>
+        <p>High-net-worth families expect fast, polished responsiveness. A slow reply to a warm introduction doesn't just lose momentum — it quietly signals that the firm's operational rigor may not match its reputation.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🕯️</div>
+        <h3>Discretion Can't Be Sacrificed for Speed</h3>
+        <p>Anything that feels like a mass-marketing sequence undermines the trust that got the introduction in the first place. Follow-up has to feel personal and low-key — never "salesy" — even when it's systematic.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📋</div>
+        <h3>No Visible Referral Pipeline</h3>
+        <p>Introductions come in through many channels — advisors, existing families, professional contacts — but there's no single, discreet system tracking who introduced whom, and where each relationship stands.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🌱</div>
+        <h3>Long Consideration Cycles, No Structured Nurture</h3>
+        <p>Choosing a family office is a multi-month decision. Without a patient, white-glove nurture cadence, prospective families quietly drift — not because they said no, but because nobody stayed in view.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔗</div>
+        <h3>Introducers Go Unacknowledged</h3>
+        <p>The advisors and families who make introductions are the firm's most valuable channel — yet most firms have no system to thank them, keep them informed, and keep the next introduction coming.</p>
+      </div>
+    </div>
+
+    <div class="stat-banner">
+      <div class="stat-item">
+        <div class="stat-num">90%+</div>
+        <div class="stat-desc">of family office relationships<br/>originate from referral</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">&lt;1 hr</div>
+        <div class="stat-desc">response window that preserves<br/>the tone of trust</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6–12 mo</div>
+        <div class="stat-desc">typical decision window for<br/>a new family relationship</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1×</div>
+        <div class="stat-desc">chance to set the tone on<br/>a first response</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PIPELINE ─────────────────────────────────────────── -->
+<section id="pipeline">
+  <div class="container">
+    <div class="section-label">The System</div>
+    <h2 class="section-title">Every Introduction. Discreetly Tracked, End to End.</h2>
+    <p class="section-sub">A 7-stage pipeline that carries a trusted introduction all the way to an onboarded family relationship — with the same care and discretion Hawk Family Office already brings to every conversation.</p>
+
+    <div class="pipeline-track">
+      <div class="pipeline-step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🤝</div>
+        <div class="step-label">Referral Introduction Made</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">2</div>
+        <div class="step-icon">✉️</div>
+        <div class="step-label">Initial Inquiry Received</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">3</div>
+        <div class="step-icon">🕊️</div>
+        <div class="step-label">Prompt, Personal Response</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">4</div>
+        <div class="step-icon">📅</div>
+        <div class="step-label">Discovery Call Booked</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">5</div>
+        <div class="step-icon">🗣️</div>
+        <div class="step-label">Discovery Call Held</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">6</div>
+        <div class="step-icon">🌿</div>
+        <div class="step-label">Relationship Nurture</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">7</div>
+        <div class="step-icon">🏛️</div>
+        <div class="step-label">Family Onboarded</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOWS ───────────────────────────────────────────── -->
+<section id="flows">
+  <div class="container">
+    <div class="section-label">5 Automation Flows</div>
+    <h2 class="section-title">What Gets Built For You</h2>
+    <p class="section-sub">Five discreet, white-glove automation sequences that run quietly in the background — so every introduction, discovery call, and onboarding feels personal, even when it's systematic.</p>
+
+    <div class="flows-list">
+
+      <!-- Flow 1 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">1</div>
+          <div class="flow-header-text">
+            <h3>🕊️ Instant, Personalized Response to Referral Introductions</h3>
+            <p>The moment a trusted introduction comes in — from an advisor, lawyer, or existing family — it gets a prompt, warm, personal reply that sets the right tone from the very first message.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📋</div>
+              <div class="flow-step-text">
+                <h4>Introduction Logged Discreetly</h4>
+                <p>Captured the moment it arrives — by email, introducer message, or website inquiry — into a private, secure record with the introducer noted</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">✍️</div>
+              <div class="flow-step-text">
+                <h4>Personal Acknowledgment Sent Within the Hour</h4>
+                <p>A considered, individually-toned reply — never templated language — confirming receipt and offering a clear, unhurried next step</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📅</div>
+              <div class="flow-step-text">
+                <h4>Private Discovery Call Offered</h4>
+                <p>A discreet scheduling link for a confidential introductory conversation, with no public booking page or mass-market styling</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔔</div>
+              <div class="flow-step-text">
+                <h4>Internal Alert to the Right Person</h4>
+                <p>Nirmal and the relevant team member are notified immediately, with introducer context, so the human follow-up is fully informed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 2 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">2</div>
+          <div class="flow-header-text">
+            <h3>📅 Discovery Call Booking &amp; No-Show Prevention</h3>
+            <p>Removes scheduling friction for prospective families and keeps discovery calls on track with quiet, well-timed reminders.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">✅</div>
+              <div class="flow-step-text">
+                <h4>Booking Confirmed With a Personal Touch</h4>
+                <p>Confirmation sent immediately, with a short, discreet note on what to expect from the conversation — never a generic auto-reply feel</p>
+              </div>
+            </div>
+          </div>
+          <div class="flow-timeline">
+            <div class="tl-node">
+              <div class="tl-dot">📬</div>
+              <div class="tl-label">Booking</div>
+              <div class="tl-sublabel">Confirmed</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">📧</div>
+              <div class="tl-label">48 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🔔</div>
+              <div class="tl-label">24 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">⏰</div>
+              <div class="tl-label">2 hrs</div>
+              <div class="tl-sublabel">Final Note</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🗣️</div>
+              <div class="tl-label">Call</div>
+              <div class="tl-sublabel">Takes Place</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">💌</div>
+              <div class="tl-label">Same day</div>
+              <div class="tl-sublabel">Thank-You Note</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 3 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">3</div>
+          <div class="flow-header-text">
+            <h3>🌱 Post-Call Nurture for Prospective Families Still Deciding</h3>
+            <p>A patient, low-key nurture cadence for families weighing a multi-month decision — staying present without ever feeling like pressure.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📝</div>
+              <div class="flow-step-text">
+                <h4>Week 1 — Thoughtful Recap</h4>
+                <p>A brief, personal note summarizing what was discussed and any materials promised — reinforcing attentiveness, not urgency</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📖</div>
+              <div class="flow-step-text">
+                <h4>Week 3 — Relevant Insight, Privately Shared</h4>
+                <p>A discreet, relevant perspective — market commentary or a governance insight — tailored to what matters to that family</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🏛️</div>
+              <div class="flow-step-text">
+                <h4>Week 6 — Quiet Proof of Stewardship</h4>
+                <p>An anonymized example of how Hawk Family Office has supported a family through a similar situation, shared with appropriate discretion</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🕯️</div>
+              <div class="flow-step-text">
+                <h4>Week 10 — Open-Ended Check-In</h4>
+                <p>A short, unhurried message inviting a further conversation whenever the family is ready — no deadline, no pressure</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🤝</div>
+              <div class="flow-step-text">
+                <h4>Ongoing — Relationship Owner Stays Visible</h4>
+                <p>Every touchpoint is logged privately so Nirmal always knows exactly where each prospective family stands before any personal outreach</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 4 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">4</div>
+          <div class="flow-header-text">
+            <h3>🏛️ Onboarding Automation for New Client Relationships</h3>
+            <p>Once a family decides to onboard, the transition from "decided" to "fully onboarded" is smooth, well-paced, and never feels administrative.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📄</div>
+              <div class="flow-step-text">
+                <h4>Welcome &amp; Documentation Sent Promptly</h4>
+                <p>Onboarding documents and a clear, calm outline of next steps delivered the same day the decision is made</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔔</div>
+              <div class="flow-step-text">
+                <h4>Gentle Progress Reminders</h4>
+                <p>Well-spaced, personally worded nudges on any outstanding items — respectful of the family's time and pace</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">✍️</div>
+              <div class="flow-step-text">
+                <h4>Secure Digital Signature</h4>
+                <p>Agreements completed through a secure, professional signing flow — fast for the family, fully compliant for the firm</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎉</div>
+              <div class="flow-step-text">
+                <h4>Formal Welcome to the Relationship</h4>
+                <p>A confirmed onboarding automatically notifies the full team and triggers a warm, personal welcome from Nirmal and the firm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 5 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">5</div>
+          <div class="flow-header-text">
+            <h3>🔗 Referral-Network Re-Engagement Pipeline</h3>
+            <p>Keeps the advisors, lawyers, and families who make introductions warm and appreciated — protecting the firm's single most valuable channel.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">🙏</div>
+              <div class="flow-step-text">
+                <h4>Immediate, Private Thank-You to the Introducer</h4>
+                <p>Every introducer receives prompt, personal acknowledgment the moment their introduction is received — never left to guess if it landed</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📇</div>
+              <div class="flow-step-text">
+                <h4>Confidential Introducer Record</h4>
+                <p>A private log of every introducer and every introduction they've made, so no relationship-building opportunity is ever forgotten</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🗓️</div>
+              <div class="flow-step-text">
+                <h4>Quarterly Discreet Check-In</h4>
+                <p>A low-key, personal touchpoint with past introducers — keeping the relationship warm without ever asking directly for another referral</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📈</div>
+              <div class="flow-step-text">
+                <h4>Introducer Visibility for Nirmal</h4>
+                <p>A private view of which relationships are driving the most trusted introductions, so time and attention go where they matter most</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON ───────────────────────────────────────── -->
+<section id="comparison">
+  <div class="container">
+    <div class="section-label">Before vs. After</div>
+    <h2 class="section-title">The Difference Discretion Makes</h2>
+    <p class="section-sub">Here's how a typical flow of trusted introductions looks with and without a discreet, systematic response and nurture system.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th class="col-bad">❌ Without Automation</th>
+          <th class="col-good">✅ With Automation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Response to a referral introduction</td>
+          <td class="col-bad">Hours or days, whenever inbox allows</td>
+          <td class="col-good">Personal reply within the hour, every time</td>
+        </tr>
+        <tr>
+          <td>Tone of first contact</td>
+          <td class="col-bad">Inconsistent — depends who's free that day</td>
+          <td class="col-good">Consistently discreet, warm, and unhurried</td>
+        </tr>
+        <tr>
+          <td>Referral pipeline visibility</td>
+          <td class="col-bad">Scattered across inboxes and memory</td>
+          <td class="col-good">One private, structured view for Nirmal</td>
+        </tr>
+        <tr>
+          <td>Discovery call no-shows</td>
+          <td class="col-bad">Higher — no structured reminder cadence</td>
+          <td class="col-good">Minimized with quiet, well-timed reminders</td>
+        </tr>
+        <tr>
+          <td>Follow-up during a 6–12 month decision</td>
+          <td class="col-bad">Fades after the first or second contact</td>
+          <td class="col-good">Patient, paced nurture through the full cycle</td>
+        </tr>
+        <tr>
+          <td>Onboarding of a new family</td>
+          <td class="col-bad">Manual chasing of documents and signatures</td>
+          <td class="col-good">Smooth, well-paced, fully tracked</td>
+        </tr>
+        <tr>
+          <td>Introducer relationships</td>
+          <td class="col-bad">Thanked once, then rarely revisited</td>
+          <td class="col-good">Quietly kept warm on an ongoing basis</td>
+        </tr>
+        <tr>
+          <td>Consistency across every introduction</td>
+          <td class="col-bad">Depends on who happens to see it first</td>
+          <td class="col-good">Every introduction handled to the same standard</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES ─────────────────────────────────────── -->
+<section id="deliverables">
+  <div class="container">
+    <div class="section-label">What You Get</div>
+    <h2 class="section-title">Everything Built to Fit How Hawk Family Office Already Works</h2>
+    <p class="section-sub">Not off-the-shelf marketing software — a discreet, white-glove system built around a referral-driven, relationship-first practice, tested before it ever touches a real introduction.</p>
+
+    <div class="deliverables-grid">
+      <div class="deliverable-card">
+        <div class="deliverable-icon">⚙️</div>
+        <h3>Full System Build &amp; Setup</h3>
+        <p>Every automation configured and connected — introduction capture, response, scheduling, nurture, and onboarding — private and secure by design.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">✍️</div>
+        <h3>All Correspondence Written in Your Voice</h3>
+        <p>Every message drafted to read as personal and considered — never templated or "salesy" — matching the tone Hawk Family Office already uses.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">📇</div>
+        <h3>Confidential Referral &amp; Pipeline Tracking</h3>
+        <p>A private, structured record of every introduction, introducer, and prospective family — visible only to your team.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🧪</div>
+        <h3>Full QA Before Go-Live</h3>
+        <p>Every flow tested end-to-end with real scenarios. Nothing reaches a real introduction until it behaves exactly as intended.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🎓</div>
+        <h3>Private Handover Walkthrough</h3>
+        <p>A 1:1 session with Nirmal so the team can manage, adjust, and extend the system independently going forward.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🛡️</div>
+        <h3>4-Week Post-Launch Support</h3>
+        <p>We stay on to refine tone, timing, and sequences based on how real introductions and families actually respond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ─────────────────────────────────────────── -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-label">Implementation</div>
+    <h2 class="section-title">Live in 4 Weeks</h2>
+    <p class="section-sub">A careful 4-week build — followed by 4 weeks of hands-on support to refine tone and timing as real introductions come through.</p>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>1</div>
+        <div class="tl-content">
+          <h3>Discovery &amp; Strategy</h3>
+          <p>A confidential deep-dive into how introductions currently arrive, who the key introducers are, and how the team responds today.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>2</div>
+        <div class="tl-content">
+          <h3>Correspondence &amp; Sequence Drafting</h3>
+          <p>Every message drafted in Hawk Family Office's voice, reviewed with Nirmal, and refined until the tone is exactly right.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>3</div>
+        <div class="tl-content">
+          <h3>Build, Integrate &amp; Test</h3>
+          <p>All 5 automation flows built, connected to your calendar and inbox, and tested across realistic introduction scenarios.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>4</div>
+        <div class="tl-content">
+          <h3>Go-Live + Private Handover</h3>
+          <p>System goes live quietly in the background. Full walkthrough with the team so everyone knows exactly how it runs.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>5–8</div>
+        <div class="tl-content">
+          <h3>Support, Refine &amp; Review</h3>
+          <p>We monitor response times, nurture engagement, and onboarding pace — refining tone and timing based on real relationships.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-label" style="background: rgba(244,98,46,0.15); border-color: rgba(244,98,46,0.3); color: var(--gold-light);">Let's Talk</div>
+    <h2 class="section-title" style="color: var(--white);">Ready to Give Every Introduction the Response It Deserves?</h2>
+    <p class="section-sub">
+      Book a free, confidential 30-minute strategy call. We'll map out exactly how a discreet, white-glove system fits Hawk Family Office's way of working — no pressure, no pitch, just a clear plan.
+    </p>
+    <div style="text-align: center; margin-top: 16px;">
+      <a href="https://calendly.com/thinktoshareitsolutions/book-a-demo" target="_blank" rel="noopener" class="cta-btn">
+        Book a Free Strategy Call →
+      </a>
+      <p class="cta-note">No commitment required · 30 minutes · Free · Strictly confidential</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer>
+  <p>Prepared by <strong>Think To Share</strong> &nbsp;·&nbsp; Growth Done Thoughtfully &nbsp;·&nbsp; Proposal valid until <strong>September 8, 2026</strong> &nbsp;·&nbsp; Questions? <strong>contact@thinktoshare.com</strong></p>
+  <p style="margin-top: 8px; font-size: 12px; color: #475569;">All statistics sourced from industry research. Results vary based on niche, audience, and existing processes.</p>
+</footer>
+
+</body>
+</html>

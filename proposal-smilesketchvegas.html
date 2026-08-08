@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Automation Proposal – SmileSketch Vegas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f172a;
+      --navy2: #1e293b;
+      --gold: #f4622e;
+      --gold-light: #ff8b5e;
+      --gold-dark: #c94a1e;
+      --white: #ffffff;
+      --offwhite: #f8fafc;
+      --gray100: #f1f5f9;
+      --gray200: #e2e8f0;
+      --gray400: #94a3b8;
+      --gray600: #475569;
+      --gray800: #1e293b;
+      --green: #10b981;
+      --red: #ef4444;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(15,23,42,0.08);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--offwhite);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,23,42,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(244,98,46,0.15);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray400);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all .2s;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+      background: rgba(244,98,46,0.1);
+    }
+
+    /* ── SECTIONS ──────────────────────────────────────── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-block;
+      background: rgba(244,98,46,0.12);
+      color: var(--gold-dark);
+      border: 1px solid rgba(244,98,46,0.25);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray600);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      padding: 100px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 700px 500px at 60% 40%, rgba(244,98,46,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,98,46,0.12);
+      border: 1px solid rgba(244,98,46,0.3);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 580px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .hero-metrics {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: var(--gray400);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .hero-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.12);
+      align-self: center;
+    }
+    .hero-prepared {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-prepared-item { display: flex; flex-direction: column; }
+    .hero-prepared-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 4px; }
+    .hero-prepared-value { font-size: 15px; font-weight: 600; color: var(--white); }
+
+    /* ── PROBLEM ───────────────────────────────────────── */
+    #problem { background: var(--white); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    .problem-card {
+      background: var(--offwhite);
+      border: 1px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .problem-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .problem-icon { font-size: 32px; margin-bottom: 14px; }
+    .problem-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+    .problem-card p { font-size: 14px; color: var(--gray600); line-height: 1.65; }
+
+    .stat-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 38px; font-weight: 900; color: var(--gold); letter-spacing: -1px; line-height: 1; }
+    .stat-desc { font-size: 13px; color: #94a3b8; margin-top: 6px; }
+
+    /* ── PIPELINE ──────────────────────────────────────── */
+    #pipeline { background: var(--offwhite); }
+    .pipeline-track {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .pipeline-step {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .pipeline-step:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.1);
+    }
+    .pipeline-step .step-num {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pipeline-step .step-icon { font-size: 28px; margin: 8px 0 10px; }
+    .pipeline-step .step-label { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+    .pipeline-arrow { display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); font-weight: 700; }
+
+    /* ── FLOWS ─────────────────────────────────────────── */
+    #flows { background: var(--white); }
+    .flows-list { display: flex; flex-direction: column; gap: 32px; }
+    .flow-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s;
+    }
+    .flow-card:hover { box-shadow: var(--shadow-lg); }
+    .flow-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 28px 32px;
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--gray200);
+    }
+    .flow-num {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      color: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .flow-header-text h3 { font-size: 19px; font-weight: 800; color: var(--navy); }
+    .flow-header-text p { font-size: 14px; color: var(--gray600); margin-top: 3px; }
+    .flow-body { padding: 28px 32px; }
+    .flow-steps { display: flex; flex-direction: column; gap: 14px; }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--offwhite);
+      border-radius: 10px;
+      border-left: 3px solid var(--gold);
+    }
+    .flow-step-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .flow-step-text h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .flow-step-text p { font-size: 13px; color: var(--gray600); line-height: 1.55; }
+
+    /* timeline inside flow */
+    .flow-timeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .tl-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      min-width: 90px;
+    }
+    .tl-dot {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .tl-label { font-size: 11px; font-weight: 700; color: var(--navy); text-align: center; }
+    .tl-sublabel { font-size: 10px; color: var(--gray400); text-align: center; }
+    .tl-arrow { flex: 1; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); min-width: 20px; }
+
+    /* ── COMPARISON ────────────────────────────────────── */
+    #comparison { background: var(--offwhite); }
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+    .compare-table thead tr {
+      background: var(--navy);
+    }
+    .compare-table thead th {
+      padding: 18px 24px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .compare-table thead th.col-bad { color: #fca5a5; }
+    .compare-table thead th.col-good { color: var(--gold-light); }
+    .compare-table tbody tr { border-bottom: 1px solid var(--gray100); }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table tbody tr:hover { background: var(--offwhite); }
+    .compare-table td {
+      padding: 16px 24px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    .compare-table td:first-child { font-weight: 600; color: var(--navy); }
+    .col-bad { color: var(--red); font-weight: 500; }
+    .col-good { color: var(--green); font-weight: 600; }
+
+    /* ── DELIVERABLES ──────────────────────────────────── */
+    #deliverables { background: var(--white); }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .deliverable-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--offwhite);
+      transition: box-shadow .2s, border-color .2s, transform .2s;
+    }
+    .deliverable-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .deliverable-icon { font-size: 28px; margin-bottom: 12px; }
+    .deliverable-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .deliverable-card p { font-size: 13px; color: var(--gray600); line-height: 1.6; }
+
+    /* ── TIMELINE ──────────────────────────────────────── */
+    #timeline { background: var(--offwhite); }
+    .timeline-list { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(244,98,46,0.1));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .tl-week-dot {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      text-align: center;
+      line-height: 1.2;
+      z-index: 1;
+    }
+    .tl-content {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .tl-content h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .tl-content p { font-size: 14px; color: var(--gray600); }
+
+    /* ── PRICING ───────────────────────────────────────── */
+    #pricing { background: var(--white); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    .pricing-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .pricing-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.15), var(--shadow-lg);
+    }
+    .pricing-tag {
+      background: var(--gold);
+      color: var(--navy);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 16px;
+    }
+    .pricing-header {
+      padding: 28px 28px 20px;
+      border-bottom: 1px solid var(--gray100);
+    }
+    .pricing-name { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .pricing-desc { font-size: 13px; color: var(--gray600); }
+    .pricing-price {
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--gray100);
+    }
+    .price-row { display: flex; align-items: baseline; gap: 6px; }
+    .price-currency { font-size: 20px; font-weight: 700; color: var(--gray600); }
+    .price-amount { font-size: 44px; font-weight: 900; color: var(--navy); letter-spacing: -2px; line-height: 1; }
+    .price-type { font-size: 13px; color: var(--gray400); }
+    .pricing-body { padding: 24px 28px; }
+    .pricing-includes { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 14px; }
+    .pricing-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: var(--gray800);
+    }
+    .pricing-item .pi-check { color: var(--green); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .pricing-cta {
+      display: block;
+      text-align: center;
+      margin: 4px 28px 28px;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .2s;
+      background: var(--navy);
+      color: var(--gold);
+      border: 2px solid var(--navy);
+    }
+    .pricing-cta:hover { background: transparent; color: var(--navy); }
+    .pricing-card.featured .pricing-cta {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+    .pricing-card.featured .pricing-cta:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: var(--white); }
+
+    .roi-box {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .roi-icon { font-size: 48px; flex-shrink: 0; }
+    .roi-text h3 { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .roi-text p { font-size: 15px; color: #94a3b8; line-height: 1.6; }
+    .roi-text strong { color: var(--gold); }
+
+    /* ── CTA ───────────────────────────────────────────── */
+    #cta {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #0f172a 100%);
+      text-align: center;
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 400px at 50% 50%, rgba(244,98,46,0.06) 0%, transparent 70%);
+    }
+    #cta .section-title { color: var(--white); }
+    #cta .section-sub { color: #94a3b8; margin-left: auto; margin-right: auto; text-align: center; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: all .2s;
+      box-shadow: 0 8px 30px rgba(244,98,46,0.35);
+    }
+    .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(244,98,46,0.45); }
+    .cta-note { font-size: 13px; color: var(--gray400); margin-top: 20px; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer p { font-size: 13px; color: var(--gray400); }
+    footer strong { color: var(--gold); }
+
+    /* ── MOBILE ────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero-metrics { gap: 20px; }
+      .hero-divider { display: none; }
+      .stat-banner { padding: 28px 20px; }
+      .flow-header, .flow-body { padding: 20px; }
+      .compare-table { display: block; overflow-x: auto; }
+      .roi-box { padding: 28px 24px; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Think To Share" height="34" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#flows">Automations</a></li>
+      <li><a href="#comparison">Results</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-badge">✨ Marketing Automation Proposal — Cosmetic Dentistry</div>
+    <h1 class="hero-title">
+      Turn Every Smile Inquiry Into<br/>
+      <span class="highlight">A Booked Consultation.</span>
+    </h1>
+    <p class="hero-sub">
+      SmileSketch Vegas has the aesthetic, the social presence, and the Instagram-and-Pinterest-worthy results that stop people mid-scroll. What's missing is the system that catches every one of those inquiries the moment they land — and walks them, automatically, from "how much are veneers?" to a signed treatment plan.
+    </p>
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-value">8×</span>
+        <span class="metric-label">Higher conversion with<br/>sub-5-min response</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">78%</span>
+        <span class="metric-label">Of cosmetic cases need<br/>5+ follow-up touches</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">3</span>
+        <span class="metric-label">Social channels driving<br/>inquiries, zero capture</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">30%+</span>
+        <span class="metric-label">Of consults lost to<br/>no-shows industry-wide</span>
+      </div>
+    </div>
+    <div class="hero-prepared">
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared For</span>
+        <span class="hero-prepared-value">Dr. Silva Battaglin &amp; Dr. Adam Persky, SmileSketch Vegas</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared By</span>
+        <span class="hero-prepared-value">Think To Share</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Date</span>
+        <span class="hero-prepared-value">August 8, 2026</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Valid Until</span>
+        <span class="hero-prepared-value">September 8, 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM ──────────────────────────────────────────── -->
+<section id="problem">
+  <div class="container">
+    <div class="section-label">The Real Problem</div>
+    <h2 class="section-title">Where Booked Consults Are Slipping Away</h2>
+    <p class="section-sub">SmileSketch Vegas is a young, modern practice competing in one of the most crowded cosmetic-dentistry markets in the country. The aesthetic is dialed in — the follow-up system isn't yet. Here's where high-intent patients are quietly falling through.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">🏛️</div>
+        <h3>A Young Practice Still Building Trust</h3>
+        <p>Incorporated in 2022 and not yet BBB-accredited, SmileSketch Vegas is competing against decades-old Vegas cosmetic practices. Every inquiry that goes unanswered is trust that's harder to rebuild the second time around.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📱</div>
+        <h3>Social-Driven Inquiries, No Capture System</h3>
+        <p>Instagram, Facebook, and Pinterest are actively driving DMs and comments asking about veneers and smile makeovers — but without a structured intake, those messages sit unread between appointments.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">⏰</div>
+        <h3>Slow Response Loses High-Ticket Cases</h3>
+        <p>A patient asking about a $15K–$30K smile makeover is almost always comparing 2–3 practices at once. Whoever replies first — with a clear next step — usually wins the consult.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🦷</div>
+        <h3>Long Decision Cycles Go Cold</h3>
+        <p>Veneers, implants, and full smile makeovers are rarely decided on the spot. Without a nurture sequence, prospects who don't book immediately after their first inquiry quietly disappear.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📵</div>
+        <h3>Missed Calls &amp; No-Shows, No Recovery</h3>
+        <p>There's no visible system to catch a missed call or a no-show consult and bring that patient back into the pipeline — each one is a fully-marketed lead going to waste.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">⭐</div>
+        <h3>No Systemized Review &amp; Referral Engine</h3>
+        <p>Word-of-mouth and 5-star reviews build credibility faster than any ad spend — but without automatic prompts after great results, most happy patients never get asked.</p>
+      </div>
+    </div>
+
+    <div class="stat-banner">
+      <div class="stat-item">
+        <div class="stat-num">8×</div>
+        <div class="stat-desc">higher conversion when<br/>response time is under 5 min</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30%+</div>
+        <div class="stat-desc">of dental consults are<br/>lost to no-shows</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">78%</div>
+        <div class="stat-desc">of high-ticket cosmetic cases<br/>need 5+ follow-up touches</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">70%</div>
+        <div class="stat-desc">of patients choose a provider<br/>based on reviews first</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PIPELINE ─────────────────────────────────────────── -->
+<section id="pipeline">
+  <div class="container">
+    <div class="section-label">The System</div>
+    <h2 class="section-title">Every Inquiry. Every Channel. Fully Tracked.</h2>
+    <p class="section-sub">A 7-stage pipeline that takes someone who finds SmileSketch Vegas on Instagram or Google all the way to a signed treatment plan — without a single lead getting lost in the shuffle.</p>
+
+    <div class="pipeline-track">
+      <div class="pipeline-step">
+        <div class="step-num">1</div>
+        <div class="step-icon">📲</div>
+        <div class="step-label">Discovers SmileSketch (Social / Search)</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">2</div>
+        <div class="step-icon">💬</div>
+        <div class="step-label">Sends Inquiry (DM / Form / Call)</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">3</div>
+        <div class="step-icon">⚡</div>
+        <div class="step-label">Instant Response</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">4</div>
+        <div class="step-icon">📅</div>
+        <div class="step-label">Consult Booked</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">5</div>
+        <div class="step-icon">🔔</div>
+        <div class="step-label">Reminders &amp; Confirmation</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">6</div>
+        <div class="step-icon">🪞</div>
+        <div class="step-label">Consult &amp; Case Presented</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">7</div>
+        <div class="step-icon">✅</div>
+        <div class="step-label">Case Signed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOWS ───────────────────────────────────────────── -->
+<section id="flows">
+  <div class="container">
+    <div class="section-label">5 Automation Flows</div>
+    <h2 class="section-title">What Gets Built For You</h2>
+    <p class="section-sub">Five fully configured automation sequences that run 24/7 — across Instagram, Facebook, Pinterest, your website, and your front desk.</p>
+
+    <div class="flows-list">
+
+      <!-- Flow 1 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">1</div>
+          <div class="flow-header-text">
+            <h3>⚡ Instant Inquiry Response (0–5 Minutes)</h3>
+            <p>Every "how much for veneers?" DM, comment, or form submission gets an instant, on-brand reply before the front desk even sees it.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📋</div>
+              <div class="flow-step-text">
+                <h4>Inquiry Received (Any Channel)</h4>
+                <p>Triggers from: Instagram/Facebook DMs and comments, website contact form, Pinterest click-through, or a missed phone call</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">💬</div>
+              <div class="flow-step-text">
+                <h4>Instant, Warm Acknowledgment Sent</h4>
+                <p>A friendly, on-brand reply in SmileSketch's voice — confirms receipt and answers the most common first question immediately</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📅</div>
+              <div class="flow-step-text">
+                <h4>Consultation Booking Link Delivered</h4>
+                <p>One-click scheduling link so they can grab a consult slot right away — no phone tag, no waiting for a callback</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🖼️</div>
+              <div class="flow-step-text">
+                <h4>Smile Gallery / Case Study Delivered</h4>
+                <p>A curated set of before-and-afters matched to what they asked about (veneers, implants, whitening) sent automatically to build confidence pre-consult</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 2 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">2</div>
+          <div class="flow-header-text">
+            <h3>📅 Booking &amp; No-Show Prevention</h3>
+            <p>Eliminates scheduling friction and dramatically reduces no-shows on consults with a smart, multi-touch reminder sequence.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">✅</div>
+              <div class="flow-step-text">
+                <h4>Booking Confirmed Immediately</h4>
+                <p>Confirmation text + email sent the moment they book, including a short intake form covering treatment goals and insurance</p>
+              </div>
+            </div>
+          </div>
+          <div class="flow-timeline">
+            <div class="tl-node">
+              <div class="tl-dot">📬</div>
+              <div class="tl-label">Booking</div>
+              <div class="tl-sublabel">Confirmed</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">📧</div>
+              <div class="tl-label">48 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">💬</div>
+              <div class="tl-label">24 hrs</div>
+              <div class="tl-sublabel">Text Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">⏰</div>
+              <div class="tl-label">2 hrs</div>
+              <div class="tl-sublabel">Final Alert</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🪞</div>
+              <div class="tl-label">Consult</div>
+              <div class="tl-sublabel">Happens</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">💌</div>
+              <div class="tl-label">Same Day</div>
+              <div class="tl-sublabel">Thank You</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 3 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">3</div>
+          <div class="flow-header-text">
+            <h3>🌱 Post-Consult Nurture for Big Cases (14 Days)</h3>
+            <p>For every "let me think about it" on a veneers, implant, or full smile makeover case — a 14-day sequence that keeps the door open without any manual chasing.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📝</div>
+              <div class="flow-step-text">
+                <h4>Day 1 — Thank You + Treatment Plan Recap</h4>
+                <p>Reinforces what Dr. Battaglin or Dr. Persky discussed and re-sends the proposed treatment plan in writing</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">✨</div>
+              <div class="flow-step-text">
+                <h4>Day 3 — Similar Smile Transformation</h4>
+                <p>A before-and-after case similar to their own situation, showing the realistic outcome they can expect</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">💳</div>
+              <div class="flow-step-text">
+                <h4>Day 5 — Financing &amp; Payment Options</h4>
+                <p>Directly addresses the #1 hesitation on high-ticket cases — cost — by laying out financing plans clearly and simply</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎁</div>
+              <div class="flow-step-text">
+                <h4>Day 7 — Smile Consultation Guide</h4>
+                <p>A short, helpful guide on what to expect from their specific procedure, reinforcing expertise without a hard sell</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">⭐</div>
+              <div class="flow-step-text">
+                <h4>Day 10 — Patient Reviews &amp; Credibility</h4>
+                <p>Real patient testimonials and results, framed as social proof for a practice still building its reputation in Vegas</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🤝</div>
+              <div class="flow-step-text">
+                <h4>Day 14 — Soft Close</h4>
+                <p>"Ready to move forward with your new smile?" — a low-pressure final touchpoint that re-opens the conversation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 4 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">4</div>
+          <div class="flow-header-text">
+            <h3>✍️ Treatment Acceptance &amp; Onboarding Automation</h3>
+            <p>Once a patient says yes, consent forms, payment, and pre-appointment steps happen automatically — no case stalls waiting on paperwork.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📄</div>
+              <div class="flow-step-text">
+                <h4>Treatment Plan &amp; Consent Auto-Delivered</h4>
+                <p>Sent within 30 minutes of acceptance — digital signature ready, while the decision is still fresh</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">💳</div>
+              <div class="flow-step-text">
+                <h4>Deposit &amp; Financing Link Sent</h4>
+                <p>Payment or financing application link delivered automatically alongside the signed plan — removes the last friction point</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🗓️</div>
+              <div class="flow-step-text">
+                <h4>Procedure Appointments Auto-Scheduled</h4>
+                <p>Multi-visit cases (veneer prep, implant stages) get their full appointment series booked and confirmed in one pass</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🦷</div>
+              <div class="flow-step-text">
+                <h4>Pre-Procedure Prep Instructions</h4>
+                <p>Automatic reminders with prep instructions and aftercare expectations sent ahead of each visit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 5 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">5</div>
+          <div class="flow-header-text">
+            <h3>📡 Social-to-Patient Pipeline (Always-On)</h3>
+            <p>Turns Instagram, Facebook, and Pinterest — where SmileSketch already gets attention — into a continuously growing list of warm, ready-to-book prospects.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📸</div>
+              <div class="flow-step-text">
+                <h4>Auto-Reply on Comments &amp; DMs</h4>
+                <p>Every comment asking "how much?" or "is this you?" on a smile transformation post triggers an instant DM with more info and a booking link</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">⭐</div>
+              <div class="flow-step-text">
+                <h4>Automatic Review &amp; Referral Requests</h4>
+                <p>Every completed case triggers a review request (Google, Facebook) and a referral offer — building BBB-worthy credibility faster than organic growth alone</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📬</div>
+              <div class="flow-step-text">
+                <h4>Monthly Smile Spotlight Newsletter</h4>
+                <p>Automatically compiled from recent transformations and sent to the growing patient/prospect list — keeps SmileSketch top of mind</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎯</div>
+              <div class="flow-step-text">
+                <h4>Smart Segmentation by Interest</h4>
+                <p>Separates "just browsing" followers from "ready to book" prospects based on engagement, so front-desk time goes to the hottest leads first</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON ───────────────────────────────────────── -->
+<section id="comparison">
+  <div class="container">
+    <div class="section-label">Before vs. After</div>
+    <h2 class="section-title">The Numbers Don't Lie</h2>
+    <p class="section-sub">Here's what a typical month of social- and search-driven inquiries looks like for SmileSketch Vegas with and without this system.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th class="col-bad">❌ Without Automation</th>
+          <th class="col-good">✅ With Automation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Instagram / Facebook / Pinterest DMs</td>
+          <td class="col-bad">Answered whenever someone gets to them</td>
+          <td class="col-good">Instant reply, every channel, 24/7</td>
+        </tr>
+        <tr>
+          <td>Inquiry response time</td>
+          <td class="col-bad">Hours, sometimes next-day</td>
+          <td class="col-good">Under 5 minutes</td>
+        </tr>
+        <tr>
+          <td>Consults booked (of 50 inquiries)</td>
+          <td class="col-bad">18</td>
+          <td class="col-good">35+</td>
+        </tr>
+        <tr>
+          <td>Consult no-shows</td>
+          <td class="col-bad">30%+ — no reminder system</td>
+          <td class="col-good">Under 8% with 3-touch reminders</td>
+        </tr>
+        <tr>
+          <td>Follow-up on undecided veneer/implant cases</td>
+          <td class="col-bad">One call, then forgotten</td>
+          <td class="col-good">14-day automatic nurture sequence</td>
+        </tr>
+        <tr>
+          <td>Treatment plan acceptance follow-up</td>
+          <td class="col-bad">Manual, inconsistent</td>
+          <td class="col-good">Automatic consent, payment &amp; scheduling</td>
+        </tr>
+        <tr>
+          <td>Google / Facebook reviews collected</td>
+          <td class="col-bad">Rare, only if asked in person</td>
+          <td class="col-good">Requested automatically after every case</td>
+        </tr>
+        <tr>
+          <td>Lead &amp; inquiry tracking</td>
+          <td class="col-bad">Scattered across DMs, calls, forms</td>
+          <td class="col-good">Unified CRM with full patient history</td>
+        </tr>
+        <tr>
+          <td>Front-desk time on follow-up</td>
+          <td class="col-bad">Several hours per week</td>
+          <td class="col-good">Under 30 minutes per week</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES ─────────────────────────────────────── -->
+<section id="deliverables">
+  <div class="container">
+    <div class="section-label">What You Get</div>
+    <h2 class="section-title">Everything Included. Nothing Left to Figure Out.</h2>
+    <p class="section-sub">We don't just hand you tools. We build SmileSketch Vegas's entire system, write every message in your voice, and make sure it works before we hand it over.</p>
+
+    <div class="deliverables-grid">
+      <div class="deliverable-card">
+        <div class="deliverable-icon">⚙️</div>
+        <h3>Full System Build &amp; Setup</h3>
+        <p>Every automation configured, connected, and tested — CRM, social inboxes, booking, consent forms, and payments.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">✍️</div>
+        <h3>All Sequence Copy Written For You</h3>
+        <p>Every DM reply, email, and text written to match SmileSketch's warm, modern brand voice — welcome messages, nurture sequences, reminders, and review requests.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🔗</div>
+        <h3>Multi-Platform Integration</h3>
+        <p>Instagram, Facebook, Pinterest, your website, and your front-desk phone line — all connected into one pipeline.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🧪</div>
+        <h3>Full QA Before Go-Live</h3>
+        <p>Every flow tested end-to-end, on every channel. Nothing goes live until we've confirmed it works exactly as designed.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🎓</div>
+        <h3>Front-Desk Training Session</h3>
+        <p>A 1:1 walkthrough with your team so anyone can manage, update, and expand the system independently.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🛡️</div>
+        <h3>4 Weeks of Post-Launch Support</h3>
+        <p>We stay on to fix issues, optimize sequences, and refine based on real booking and conversion data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ─────────────────────────────────────────── -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-label">Implementation</div>
+    <h2 class="section-title">Live in 4 Weeks</h2>
+    <p class="section-sub">A structured 4-week build process — then 4 weeks of active support to optimize and improve.</p>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>1</div>
+        <div class="tl-content">
+          <h3>Discovery &amp; Strategy</h3>
+          <p>Deep-dive into SmileSketch's current inquiry flow across Instagram, Facebook, Pinterest, and the front desk. CRM and tech stack setup begins.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>2</div>
+        <div class="tl-content">
+          <h3>Content &amp; Sequence Writing</h3>
+          <p>All DM replies and email/text sequences written, reviewed with Dr. Battaglin and Dr. Persky, and approved. Automation map finalized.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>3</div>
+        <div class="tl-content">
+          <h3>Build, Integrate &amp; Test</h3>
+          <p>All 5 automation flows built, connected across every social channel, and tested against real-world scenarios.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>4</div>
+        <div class="tl-content">
+          <h3>Go-Live + Handover</h3>
+          <p>System goes live. Full front-desk walkthrough and training session. SmileSketch starts capturing every inquiry automatically.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>5–8</div>
+        <div class="tl-content">
+          <h3>Support, Optimize &amp; Report</h3>
+          <p>Monitor response rates, booking rates, and no-show rates. Refine sequences based on real results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-label" style="background: rgba(244,98,46,0.15); border-color: rgba(244,98,46,0.3); color: var(--gold-light);">Let's Talk</div>
+    <h2 class="section-title" style="color: var(--white);">Ready to Turn Followers Into Patients?</h2>
+    <p class="section-sub">
+      Book a free 30-minute strategy call. We'll map out exactly which automations will have the biggest impact on booked consults and case acceptance for SmileSketch Vegas — no pressure, no pitch, just a clear plan.
+    </p>
+    <div style="text-align: center; margin-top: 16px;">
+      <a href="https://calendly.com/thinktoshareitsolutions/book-a-demo" target="_blank" rel="noopener" class="cta-btn">
+        Book a Free Strategy Call →
+      </a>
+      <p class="cta-note">No commitment required · 30 minutes · Free</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer>
+  <p>Prepared by <strong>Think To Share</strong> &nbsp;·&nbsp; Growth Done Thoughtfully &nbsp;·&nbsp; Proposal valid until <strong>September 8, 2026</strong> &nbsp;·&nbsp; Questions? <strong>contact@thinktoshare.com</strong></p>
+  <p style="margin-top: 8px; font-size: 12px; color: #475569;">All statistics sourced from industry research. Results vary based on niche, audience, and existing processes.</p>
+</footer>
+
+</body>
+</html>

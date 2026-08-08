@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Automation Proposal – Dr. Jassar El Jabouri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f172a;
+      --navy2: #1e293b;
+      --gold: #f4622e;
+      --gold-light: #ff8b5e;
+      --gold-dark: #c94a1e;
+      --white: #ffffff;
+      --offwhite: #f8fafc;
+      --gray100: #f1f5f9;
+      --gray200: #e2e8f0;
+      --gray400: #94a3b8;
+      --gray600: #475569;
+      --gray800: #1e293b;
+      --green: #10b981;
+      --red: #ef4444;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(15,23,42,0.08);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--offwhite);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,23,42,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(244,98,46,0.15);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray400);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all .2s;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+      background: rgba(244,98,46,0.1);
+    }
+
+    /* ── SECTIONS ──────────────────────────────────────── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-block;
+      background: rgba(244,98,46,0.12);
+      color: var(--gold-dark);
+      border: 1px solid rgba(244,98,46,0.25);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray600);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      padding: 100px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 700px 500px at 60% 40%, rgba(244,98,46,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,98,46,0.12);
+      border: 1px solid rgba(244,98,46,0.3);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 580px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .hero-metrics {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: var(--gray400);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .hero-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.12);
+      align-self: center;
+    }
+    .hero-prepared {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-prepared-item { display: flex; flex-direction: column; }
+    .hero-prepared-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 4px; }
+    .hero-prepared-value { font-size: 15px; font-weight: 600; color: var(--white); }
+
+    /* ── PROBLEM ───────────────────────────────────────── */
+    #problem { background: var(--white); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    .problem-card {
+      background: var(--offwhite);
+      border: 1px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .problem-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .problem-icon { font-size: 32px; margin-bottom: 14px; }
+    .problem-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+    .problem-card p { font-size: 14px; color: var(--gray600); line-height: 1.65; }
+
+    .stat-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 38px; font-weight: 900; color: var(--gold); letter-spacing: -1px; line-height: 1; }
+    .stat-desc { font-size: 13px; color: #94a3b8; margin-top: 6px; }
+
+    /* ── PIPELINE ──────────────────────────────────────── */
+    #pipeline { background: var(--offwhite); }
+    .pipeline-track {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .pipeline-step {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .pipeline-step:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.1);
+    }
+    .pipeline-step .step-num {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pipeline-step .step-icon { font-size: 28px; margin: 8px 0 10px; }
+    .pipeline-step .step-label { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+    .pipeline-arrow { display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); font-weight: 700; }
+
+    /* ── FLOWS ─────────────────────────────────────────── */
+    #flows { background: var(--white); }
+    .flows-list { display: flex; flex-direction: column; gap: 32px; }
+    .flow-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s;
+    }
+    .flow-card:hover { box-shadow: var(--shadow-lg); }
+    .flow-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 28px 32px;
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--gray200);
+    }
+    .flow-num {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      color: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .flow-header-text h3 { font-size: 19px; font-weight: 800; color: var(--navy); }
+    .flow-header-text p { font-size: 14px; color: var(--gray600); margin-top: 3px; }
+    .flow-body { padding: 28px 32px; }
+    .flow-steps { display: flex; flex-direction: column; gap: 14px; }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--offwhite);
+      border-radius: 10px;
+      border-left: 3px solid var(--gold);
+    }
+    .flow-step-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .flow-step-text h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .flow-step-text p { font-size: 13px; color: var(--gray600); line-height: 1.55; }
+
+    /* timeline inside flow */
+    .flow-timeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .tl-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      min-width: 90px;
+    }
+    .tl-dot {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .tl-label { font-size: 11px; font-weight: 700; color: var(--navy); text-align: center; }
+    .tl-sublabel { font-size: 10px; color: var(--gray400); text-align: center; }
+    .tl-arrow { flex: 1; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); min-width: 20px; }
+
+    /* ── COMPARISON ────────────────────────────────────── */
+    #comparison { background: var(--offwhite); }
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+    .compare-table thead tr {
+      background: var(--navy);
+    }
+    .compare-table thead th {
+      padding: 18px 24px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .compare-table thead th.col-bad { color: #fca5a5; }
+    .compare-table thead th.col-good { color: var(--gold-light); }
+    .compare-table tbody tr { border-bottom: 1px solid var(--gray100); }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table tbody tr:hover { background: var(--offwhite); }
+    .compare-table td {
+      padding: 16px 24px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    .compare-table td:first-child { font-weight: 600; color: var(--navy); }
+    .col-bad { color: var(--red); font-weight: 500; }
+    .col-good { color: var(--green); font-weight: 600; }
+
+    /* ── DELIVERABLES ──────────────────────────────────── */
+    #deliverables { background: var(--white); }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .deliverable-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--offwhite);
+      transition: box-shadow .2s, border-color .2s, transform .2s;
+    }
+    .deliverable-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .deliverable-icon { font-size: 28px; margin-bottom: 12px; }
+    .deliverable-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .deliverable-card p { font-size: 13px; color: var(--gray600); line-height: 1.6; }
+
+    /* ── TIMELINE ──────────────────────────────────────── */
+    #timeline { background: var(--offwhite); }
+    .timeline-list { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(244,98,46,0.1));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .tl-week-dot {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--navy), #1e1b4b);
+      border: 2.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      text-align: center;
+      line-height: 1.2;
+      z-index: 1;
+    }
+    .tl-content {
+      background: var(--white);
+      border: 1.5px solid var(--gray200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .tl-content h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .tl-content p { font-size: 14px; color: var(--gray600); }
+
+    /* ── PRICING ───────────────────────────────────────── */
+    #pricing { background: var(--white); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    .pricing-card {
+      border: 1.5px solid var(--gray200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .pricing-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(244,98,46,0.15), var(--shadow-lg);
+    }
+    .pricing-tag {
+      background: var(--gold);
+      color: var(--navy);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 16px;
+    }
+    .pricing-header {
+      padding: 28px 28px 20px;
+      border-bottom: 1px solid var(--gray100);
+    }
+    .pricing-name { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .pricing-desc { font-size: 13px; color: var(--gray600); }
+    .pricing-price {
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--gray100);
+    }
+    .price-row { display: flex; align-items: baseline; gap: 6px; }
+    .price-currency { font-size: 20px; font-weight: 700; color: var(--gray600); }
+    .price-amount { font-size: 44px; font-weight: 900; color: var(--navy); letter-spacing: -2px; line-height: 1; }
+    .price-type { font-size: 13px; color: var(--gray400); }
+    .pricing-body { padding: 24px 28px; }
+    .pricing-includes { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gray400); margin-bottom: 14px; }
+    .pricing-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: var(--gray800);
+    }
+    .pricing-item .pi-check { color: var(--green); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .pricing-cta {
+      display: block;
+      text-align: center;
+      margin: 4px 28px 28px;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .2s;
+      background: var(--navy);
+      color: var(--gold);
+      border: 2px solid var(--navy);
+    }
+    .pricing-cta:hover { background: transparent; color: var(--navy); }
+    .pricing-card.featured .pricing-cta {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+    .pricing-card.featured .pricing-cta:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: var(--white); }
+
+    .roi-box {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .roi-icon { font-size: 48px; flex-shrink: 0; }
+    .roi-text h3 { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .roi-text p { font-size: 15px; color: #94a3b8; line-height: 1.6; }
+    .roi-text strong { color: var(--gold); }
+
+    /* ── CTA ───────────────────────────────────────────── */
+    #cta {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #0f172a 100%);
+      text-align: center;
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 400px at 50% 50%, rgba(244,98,46,0.06) 0%, transparent 70%);
+    }
+    #cta .section-title { color: var(--white); }
+    #cta .section-sub { color: #94a3b8; margin-left: auto; margin-right: auto; text-align: center; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: all .2s;
+      box-shadow: 0 8px 30px rgba(244,98,46,0.35);
+    }
+    .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(244,98,46,0.45); }
+    .cta-note { font-size: 13px; color: var(--gray400); margin-top: 20px; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer p { font-size: 13px; color: var(--gray400); }
+    footer strong { color: var(--gold); }
+
+    /* ── MOBILE ────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero-metrics { gap: 20px; }
+      .hero-divider { display: none; }
+      .stat-banner { padding: 28px 20px; }
+      .flow-header, .flow-body { padding: 20px; }
+      .compare-table { display: block; overflow-x: auto; }
+      .roi-box { padding: 28px 24px; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Think To Share" height="34" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#flows">Automations</a></li>
+      <li><a href="#comparison">Results</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-badge">📊 Marketing Automation Proposal — Endodontic Referral & Patient Care</div>
+    <h1 class="hero-title">
+      Turn Every Referral Into<br/>
+      <span class="highlight">A Booked, Reassured Patient.</span>
+    </h1>
+    <p class="hero-sub">
+      You've built two thriving specialist endodontic centres in Portsmouth and Southampton, plus a growing education brand in Dentistry Mastered. This system captures every referring dentist, every anxious patient, and every "let me think about it" — and turns them into confirmed appointments and completed treatment, automatically.
+    </p>
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-value">8×</span>
+        <span class="metric-label">Higher conversion with<br/>sub-5-min referral response</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">2</span>
+        <span class="metric-label">Locations running on<br/>manual, disconnected follow-up</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">70%</span>
+        <span class="metric-label">Of patients delay booking<br/>due to root canal anxiety</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="metric">
+        <span class="metric-value">18+ yrs</span>
+        <span class="metric-label">Of clinical authority with<br/>zero automated capture system</span>
+      </div>
+    </div>
+    <div class="hero-prepared">
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared For</span>
+        <span class="hero-prepared-value">Dr. Jassar El Jabouri</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Prepared By</span>
+        <span class="hero-prepared-value">Think To Share</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Date</span>
+        <span class="hero-prepared-value">August 8, 2026</span>
+      </div>
+      <div class="hero-prepared-item">
+        <span class="hero-prepared-label">Valid Until</span>
+        <span class="hero-prepared-value">September 8, 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM ──────────────────────────────────────────── -->
+<section id="problem">
+  <div class="container">
+    <div class="section-label">The Real Problem</div>
+    <h2 class="section-title">Where Referrals and Reassurance Are Falling Through the Cracks</h2>
+    <p class="section-sub">You've built genuine authority — two specialist referral centres, an 18+ year clinical track record, and a growing education brand in Dentistry Mastered. But none of that reputation is backed by a system that captures referrals, calms anxious patients, and reports back automatically.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">📠</div>
+        <h3>Referral Forms, Not a Referral System</h3>
+        <p>Referring dentists submit cases through downloadable forms or a static portal. Every one of them still has to be manually opened, read, and processed before a patient is even contacted.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">⏰</div>
+        <h3>Slow Response Loses Referring Dentists</h3>
+        <p>A referring practice wants confirmation their patient is being seen — fast. If that confirmation takes hours instead of minutes, they quietly start sending the next referral elsewhere.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">😟</div>
+        <h3>Root Canal Anxiety Stalls Bookings</h3>
+        <p>Patients referred for endodontic treatment are often already anxious. Without a reassurance sequence before the appointment, bookings quietly cancel or turn into no-shows.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🏢</div>
+        <h3>Two Locations, Double the Admin</h3>
+        <p>Portsmouth and Southampton each generate their own stream of referrals, bookings, and follow-ups — doubling the manual workload with no shared system tying them together.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🎓</div>
+        <h3>Dentistry Mastered Has No Funnel of Its Own</h3>
+        <p>Your education brand speaks to a completely different audience — dentists and students, not patients — but it's competing for the same inbox and the same ad hoc follow-up as your clinical referrals.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔬</div>
+        <h3>Advanced Technology, Untold Story</h3>
+        <p>CBCT imaging, operating microscopes, and laser-assisted treatment set your centres apart clinically — but that differentiation never reaches a referring dentist or nervous patient systematically, at the moment it would matter most.</p>
+      </div>
+    </div>
+
+    <div class="stat-banner">
+      <div class="stat-item">
+        <div class="stat-num">48%</div>
+        <div class="stat-desc">of referrals never receive a<br/>same-day acknowledgment</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5 min</div>
+        <div class="stat-desc">response window for<br/>8× higher conversion</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2×</div>
+        <div class="stat-desc">the admin load running two<br/>locations without one system</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30%</div>
+        <div class="stat-desc">of endodontic no-shows are<br/>driven by unaddressed anxiety</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PIPELINE ─────────────────────────────────────────── -->
+<section id="pipeline">
+  <div class="container">
+    <div class="section-label">The System</div>
+    <h2 class="section-title">Every Referral. Every Patient. Fully Tracked.</h2>
+    <p class="section-sub">A 7-stage pipeline that takes a referring dentist or a self-referred patient from first contact to completed treatment and a closed referral loop — without manual chasing, across both Portsmouth and Southampton.</p>
+
+    <div class="pipeline-track">
+      <div class="pipeline-step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🌐</div>
+        <div class="step-label">Referral or Patient Discovers Practice</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">2</div>
+        <div class="step-icon">✉️</div>
+        <div class="step-label">Referral / Inquiry Submitted</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">3</div>
+        <div class="step-icon">⚡</div>
+        <div class="step-label">Instant Triage & Response</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">4</div>
+        <div class="step-icon">📅</div>
+        <div class="step-label">Appointment Booked</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">5</div>
+        <div class="step-icon">💬</div>
+        <div class="step-label">Pre-Treatment Reassurance Nurture</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">6</div>
+        <div class="step-icon">🦷</div>
+        <div class="step-label">Treatment Completed</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">7</div>
+        <div class="step-icon">🔁</div>
+        <div class="step-label">Referral Loop Closed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOWS ───────────────────────────────────────────── -->
+<section id="flows">
+  <div class="container">
+    <div class="section-label">5 Automation Flows</div>
+    <h2 class="section-title">What Gets Built For You</h2>
+    <p class="section-sub">Five fully configured automation sequences that run 24/7 — across both centres, your referral network, and Dentistry Mastered.</p>
+
+    <div class="flows-list">
+
+      <!-- Flow 1 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">1</div>
+          <div class="flow-header-text">
+            <h3>⚡ Instant Referral & Inquiry Response (0–5 Minutes)</h3>
+            <p>Every referral — from a referring dentist's form, your website, or a patient inquiry — gets an instant, professional reply before it sits in an inbox.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📋</div>
+              <div class="flow-step-text">
+                <h4>Referral Submitted (Any Channel)</h4>
+                <p>Triggers from: online referral form, downloadable referral PDF sent by email, website contact form, or a phone inquiry logged manually</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📧</div>
+              <div class="flow-step-text">
+                <h4>Instant Acknowledgment Sent</h4>
+                <p>The referring dentist receives immediate confirmation the case was received and is being triaged; the patient receives a warm, reassuring welcome message</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📅</div>
+              <div class="flow-step-text">
+                <h4>Booking Link Delivered</h4>
+                <p>One-click link to select an appointment at Portsmouth or Southampton — no phone tag required</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📄</div>
+              <div class="flow-step-text">
+                <h4>Case Summary Requested</h4>
+                <p>Automated prompt collects any missing clinical details — radiographs, notes, referral reason — so nothing stalls at intake</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 2 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">2</div>
+          <div class="flow-header-text">
+            <h3>📅 Booking & No-Show Prevention</h3>
+            <p>Eliminates scheduling friction and reduces no-shows — critical when so many patients are already anxious about the procedure.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">✅</div>
+              <div class="flow-step-text">
+                <h4>Booking Confirmed Immediately</h4>
+                <p>Confirmation and appointment details sent instantly, tailored to whichever centre — Portsmouth or Southampton — they're booked at</p>
+              </div>
+            </div>
+          </div>
+          <div class="flow-timeline">
+            <div class="tl-node">
+              <div class="tl-dot">📬</div>
+              <div class="tl-label">Booking</div>
+              <div class="tl-sublabel">Confirmed</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">📧</div>
+              <div class="tl-label">7 days</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🔔</div>
+              <div class="tl-label">48 hrs</div>
+              <div class="tl-sublabel">Reminder</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">⏰</div>
+              <div class="tl-label">2 hrs</div>
+              <div class="tl-sublabel">Final Alert</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">🦷</div>
+              <div class="tl-label">Appointment</div>
+              <div class="tl-sublabel">Happens</div>
+            </div>
+            <div class="tl-arrow"></div>
+            <div class="tl-node">
+              <div class="tl-dot">💌</div>
+              <div class="tl-label">1 day after</div>
+              <div class="tl-sublabel">Follow-up</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 3 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">3</div>
+          <div class="flow-header-text">
+            <h3>💬 Pre-Treatment Anxiety-Reduction Nurture (10 Days)</h3>
+            <p>For every referred or self-booked root canal patient — a structured sequence that reduces day-of cancellations by addressing anxiety before it becomes a no-show.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📅</div>
+              <div class="flow-step-text">
+                <h4>Day 1 — Welcome + What to Expect</h4>
+                <p>A plain-language walkthrough of the procedure, reducing uncertainty before it takes hold</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">👋</div>
+              <div class="flow-step-text">
+                <h4>Day 3 — Meet Dr. El Jabouri</h4>
+                <p>A short introduction highlighting 18+ years of endodontic experience, building trust before the first visit</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔬</div>
+              <div class="flow-step-text">
+                <h4>Day 5 — Comfort & Technology Spotlight</h4>
+                <p>Explains the CBCT imaging, operating microscope precision, and pain-management approach used at both centres</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🏆</div>
+              <div class="flow-step-text">
+                <h4>Day 7 — Patient Story</h4>
+                <p>An anonymized account of a comfortable, successful root canal experience</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🗺️</div>
+              <div class="flow-step-text">
+                <h4>Day 9 — Logistics Reminder</h4>
+                <p>Directions, parking, and what to bring for whichever centre they're attending — Portsmouth or Southampton</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🤝</div>
+              <div class="flow-step-text">
+                <h4>Day 10 — Final Reassurance + Confirmation</h4>
+                <p>A low-pressure check-in confirming they're ready, with a direct line for any last questions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 4 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">4</div>
+          <div class="flow-header-text">
+            <h3>🤝 Referring-Dentist Relationship Automation</h3>
+            <p>Keeps referring practices in the loop automatically — the single biggest driver of repeat referrals to a specialist centre.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">✅</div>
+              <div class="flow-step-text">
+                <h4>Referral Confirmation Sent</h4>
+                <p>The referring dentist is notified the moment their patient books an appointment</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📋</div>
+              <div class="flow-step-text">
+                <h4>Treatment Update Sent</h4>
+                <p>Automatic status update once treatment is scheduled, and again once it's completed</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📄</div>
+              <div class="flow-step-text">
+                <h4>Clinical Report Auto-Delivered</h4>
+                <p>Post-treatment summary and radiographs sent back to the referring practice within hours, not weeks</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🔁</div>
+              <div class="flow-step-text">
+                <h4>Loop Closed & Relationship Reinforced</h4>
+                <p>Patient is referred back to their general dentist for restoration, with a thank-you touchpoint to the referring practice</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 5 -->
+      <div class="flow-card">
+        <div class="flow-header">
+          <div class="flow-num">5</div>
+          <div class="flow-header-text">
+            <h3>🎓 Content-to-Student Pipeline (Dentistry Mastered)</h3>
+            <p>A separate funnel for the education brand — turning dentists and students who engage with Dentistry Mastered content into course enrollments and mentees, without mixing them into the patient pipeline.</p>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step-icon">📰</div>
+              <div class="flow-step-text">
+                <h4>Capture Form on Every Course/Content Page</h4>
+                <p>A simple opt-in for webinars, course previews, and educational content — every visitor becomes a tracked contact</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">📬</div>
+              <div class="flow-step-text">
+                <h4>Educator Nurture Sequence</h4>
+                <p>Automated emails showcasing curriculum, credentials, and past trainee outcomes — including the 50+ dentists already trained</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎥</div>
+              <div class="flow-step-text">
+                <h4>Webinar / Course Launch Automation</h4>
+                <p>Registration, reminders, and follow-up handled automatically — no manual list management</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-icon">🎯</div>
+              <div class="flow-step-text">
+                <h4>Smart Segmentation</h4>
+                <p>Keeps patient leads and student/dentist leads in entirely separate systems so messaging never crosses over</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON ───────────────────────────────────────── -->
+<section id="comparison">
+  <div class="container">
+    <div class="section-label">Before vs. After</div>
+    <h2 class="section-title">The Numbers Don't Lie</h2>
+    <p class="section-sub">Here's what a typical month of referrals and patient bookings looks like with and without this system, across both centres.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th class="col-bad">❌ Without Automation</th>
+          <th class="col-good">✅ With Automation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Referral response time</td>
+          <td class="col-bad">Hours or days via manual form review</td>
+          <td class="col-good">Under 5 minutes, 24/7</td>
+        </tr>
+        <tr>
+          <td>Referring dentist updates</td>
+          <td class="col-bad">Ad hoc phone calls, or none at all</td>
+          <td class="col-good">Automatic confirmation, treatment, and report updates</td>
+        </tr>
+        <tr>
+          <td>Patient no-shows</td>
+          <td class="col-bad">High — no reassurance sequence</td>
+          <td class="col-good">Reduced with anxiety-focused nurture + reminders</td>
+        </tr>
+        <tr>
+          <td>Two-location admin</td>
+          <td class="col-bad">Duplicated manual work across sites</td>
+          <td class="col-good">One unified system for both Portsmouth & Southampton</td>
+        </tr>
+        <tr>
+          <td>Dentistry Mastered leads</td>
+          <td class="col-bad">Mixed in with patient inquiries</td>
+          <td class="col-good">Dedicated funnel for dentists & students</td>
+        </tr>
+        <tr>
+          <td>Clinical report turnaround</td>
+          <td class="col-bad">Days to weeks</td>
+          <td class="col-good">Same-day, automatically delivered</td>
+        </tr>
+        <tr>
+          <td>Booking process</td>
+          <td class="col-bad">Phone or email back-and-forth</td>
+          <td class="col-good">One-click self-scheduling</td>
+        </tr>
+        <tr>
+          <td>Lead & referral tracking</td>
+          <td class="col-bad">Scattered across inboxes and paper forms</td>
+          <td class="col-good">Unified CRM with full history</td>
+        </tr>
+        <tr>
+          <td>Time spent on admin & follow-up</td>
+          <td class="col-bad">Several hours per week, per location</td>
+          <td class="col-good">Under 30 minutes per week, both locations combined</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES ─────────────────────────────────────── -->
+<section id="deliverables">
+  <div class="container">
+    <div class="section-label">What You Get</div>
+    <h2 class="section-title">Everything Included. Nothing Left to Figure Out.</h2>
+    <p class="section-sub">We don't just hand you tools. We build your entire system, write your sequences in your voice, and make sure it works before we hand it over.</p>
+
+    <div class="deliverables-grid">
+      <div class="deliverable-card">
+        <div class="deliverable-icon">⚙️</div>
+        <h3>Full System Build & Setup</h3>
+        <p>Every automation configured for both Portsmouth and Southampton — CRM, referral intake, booking, reminders, and reporting.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">✍️</div>
+        <h3>All Sequence Copy Written For You</h3>
+        <p>Every email and message written in your voice — referral confirmations, patient reassurance sequences, and referring-dentist updates.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🔗</div>
+        <h3>Multi-Location & Multi-Brand Integration</h3>
+        <p>Specialist Endodontic Centre (both sites) and Dentistry Mastered connected into two clean, entirely separate pipelines.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🧪</div>
+        <h3>Full QA Before Go-Live</h3>
+        <p>Every flow tested end-to-end — referral intake, booking, reminders, and reporting — before anything goes live.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🎓</div>
+        <h3>Handover Training Session</h3>
+        <p>A 1:1 walkthrough for you and your team so the system can be managed, updated, and expanded independently.</p>
+      </div>
+      <div class="deliverable-card">
+        <div class="deliverable-icon">🛡️</div>
+        <h3>4-Week Post-Launch Support</h3>
+        <p>We stay on to fix issues, refine sequences, and optimize based on real referral and booking data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ─────────────────────────────────────────── -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-label">Implementation</div>
+    <h2 class="section-title">Live in 4 Weeks</h2>
+    <p class="section-sub">A structured 4-week build process — then 4 weeks of active support to optimize and improve, across both centres.</p>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>1</div>
+        <div class="tl-content">
+          <h3>Discovery & Strategy</h3>
+          <p>Deep-dive into your current referral process across both centres, the patient journey, and the Dentistry Mastered content funnel. CRM and tech stack setup begins.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>2</div>
+        <div class="tl-content">
+          <h3>Content & Sequence Writing</h3>
+          <p>Referral confirmations, reassurance nurture, and referring-dentist update sequences written, reviewed with you, and approved.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>3</div>
+        <div class="tl-content">
+          <h3>Build, Integrate & Test</h3>
+          <p>All 5 automation flows built and tested across both Portsmouth and Southampton, plus the Dentistry Mastered funnel.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>4</div>
+        <div class="tl-content">
+          <h3>Go-Live + Handover</h3>
+          <p>System goes live at both locations. Full walkthrough and training session for you and your team.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-week-dot">WK<br/>5–8</div>
+        <div class="tl-content">
+          <h3>Support, Optimize & Report</h3>
+          <p>Monitor referral response times, booking rates, and no-show reduction. Refine sequences based on real results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-label" style="background: rgba(244,98,46,0.15); border-color: rgba(244,98,46,0.3); color: var(--gold-light);">Let's Talk</div>
+    <h2 class="section-title" style="color: var(--white);">Ready to Turn Every Referral Into a Treated Patient?</h2>
+    <p class="section-sub">
+      Book a free 30-minute strategy call. We'll map out exactly which automations will have the highest impact across Portsmouth, Southampton, and Dentistry Mastered — no pressure, no pitch, just a clear plan.
+    </p>
+    <div style="text-align: center; margin-top: 16px;">
+      <a href="https://calendly.com/thinktoshareitsolutions/book-a-demo" target="_blank" rel="noopener" class="cta-btn">
+        Book a Free Strategy Call →
+      </a>
+      <p class="cta-note">No commitment required · 30 minutes · Free</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer>
+  <p>Prepared by <strong>Think To Share</strong> &nbsp;·&nbsp; Growth Done Thoughtfully &nbsp;·&nbsp; Proposal valid until <strong>September 8, 2026</strong> &nbsp;·&nbsp; Questions? <strong>contact@thinktoshare.com</strong></p>
+  <p style="margin-top: 8px; font-size: 12px; color: #475569;">All statistics sourced from industry research. Results vary based on niche, audience, and existing processes.</p>
+</footer>
+
+</body>
+</html>
