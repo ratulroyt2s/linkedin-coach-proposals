@@ -124,5 +124,13 @@ All proposals are tailored single-page marketing automation pitches built by Thi
 
 ---
 
-**Total proposals: 69**  
+## Batch 8 — Dental Technology Consulting (1 proposal)
+
+| Name | Niche / Company | Live URL |
+|------|----------------|----------|
+| Dr. Marty Jablow | Dental Tech Advisors / Cellerant Consulting Group — "America's Dental Technology Coach," international lecturer & educator, Woodbridge NJ | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-marty-jablow.html) |
+
+---
+
+**Total proposals: 70**  
 **Prepared by:** Think To Share · [thinktoshare.com](https://thinktoshare.com) · contact@thinktoshare.com
