@@ -124,13 +124,24 @@ All proposals are tailored single-page marketing automation pitches built by Thi
 
 ---
 
-## Batch 8 — Dental Technology Consulting (1 proposal)
+## Batch 8 — Dental, Finance, Tax & Family Office (12 proposals)
 
 | Name | Niche / Company | Live URL |
 |------|----------------|----------|
+| Dr. Jim Arnold | Foundation Dental Services — dental practice transitions, mastermind & luxury retreats for dentists | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-jim-arnold.html) |
+| Dr. Silva Battaglin & Dr. Adam Persky | SmileSketch Vegas — cosmetic dentistry (veneers, implants, whitening), Las Vegas NV | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-smilesketchvegas.html) |
+| Dr. Kateryna O'Kill | Dentalia Ltd / be-U — dentistry & facial aesthetics (wrinkle reduction, fillers), UK | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-kateryna-okill.html) |
 | Dr. Marty Jablow | Dental Tech Advisors / Cellerant Consulting Group — "America's Dental Technology Coach," international lecturer & educator, Woodbridge NJ | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-marty-jablow.html) |
+| Dr. Jassar El Jabouri | Specialist Endodontic Centre / Dentistry Mastered — endodontic referral specialist, Portsmouth & Southampton UK | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-jassar-el-jabouri.html) |
+| Dr. Arnold Gangaidzo | Lancashire Smiles — family dentistry, building a multi-site regional brand, Kirkham UK | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-arnold-gangaidzo.html) |
+| Dr. Deren Flesher | Dental Success Institute coach / ex-Modento founder — dental call-conversion & financial-fitness coaching, Oklahoma City | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-deren-flesher.html) |
+| Nirmal Patel | Hawk Family Office — private wealth / family office, London UK | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-nirmal-patel.html) |
+| Nicole Lijoi | Carolina Tax Consulting, LLC — Tax Director, Fortune 500 & venture-backed tax advisory, 5,800+ member LinkedIn group | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-nicole-lijoi.html) |
+| Anthony Pollock | Anthony Pollock & Associates — Virtual CFO for startups, scale-ups & exit planning, UK | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-anthony-pollock.html) |
+| D. Ellis | No public profile data found (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-d-ellis.html) |
+| Douglas Greenberg | No confirmed profile match — common name collision (generic professional proposal) | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-douglas-greenberg.html) |
 
 ---
 
-**Total proposals: 70**  
+**Total proposals: 81**  
 **Prepared by:** Think To Share · [thinktoshare.com](https://thinktoshare.com) · contact@thinktoshare.com
