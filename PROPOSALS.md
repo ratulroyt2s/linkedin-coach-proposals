@@ -143,5 +143,23 @@ All proposals are tailored single-page marketing automation pitches built by Thi
 
 ---
 
-**Total proposals: 81**  
+## Batch 9 — Tax, CFO Advisory & Industrial Real Estate (9 proposals)
+
+| Name | Niche / Company | Live URL |
+|------|----------------|----------|
+| Rachid Barry | RMJ Tax Consultant — tax strategy, resolution & business funding, Houston TX | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-rachid-barry.html) |
+| Grant E. | GrantTheCFO — fractional CFO/COO/CAO, AI-for-SMB content, Atlanta GA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-grant-e.html) |
+| Natika Walker | NJW & Associates Financial Services, LLC — financial services, Washington DC-Baltimore area | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-natika-walker.html) |
+| Mike Dyal | Providence Tax Partner — tax planning, exit & capital gains advisory, Bellevue WA | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-michael-dyal.html) |
+| Juan Ojeda Jr. | Structural Accountability — tax practice, governance & reporting systems, Las Vegas NV | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-juan-ojeda.html) |
+| Raul Lopez | CFO Associates, LLC — CFO/tax advisory for PE firms & family offices, Tampa Bay FL | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-raul-lopez.html) |
+| Michael Freedberg | Suffolk Industrial Properties, LLC — industrial real estate brokerage, Long Island NY | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-michael-freedberg.html) |
+| Sharrin Fuller | Glass Wallet Ventures — accounting-firm scaling advisory, Las Vegas NV | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-sharrin-fuller.html) |
+| Brian Hogan | ABusinessManager.com — fractional CFO & accounting services, St. Augustine FL | [View →](https://ratulroyt2s.github.io/linkedin-coach-proposals/proposal-brian-hogan.html) |
+
+*Note: Douglas Greenberg (Batch 8) was refreshed in this batch with an updated date — no confirmed profile match still exists, so the content remains a generic professional proposal.*
+
+---
+
+**Total proposals: 90**  
 **Prepared by:** Think To Share · [thinktoshare.com](https://thinktoshare.com) · contact@thinktoshare.com
